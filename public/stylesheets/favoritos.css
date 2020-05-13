@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box;
+}
+ul#favs.uk-slider-items.uk-grid.uk-grid-match{
+  position: relative;
+  left: -450px !important;
+}
+li.uk-active{
+  position: relative;
+  left: 250;
+}
+h1.favoritas{
+  font-family: sans-serif;
+  font-size: 3vh;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 3px #F9C719;
+  color: #F9C719;
+  background-color: black;
+  padding: 1%;
+  text-align: center;
+  width: 28%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  position: relative;
+  left: 37.5%;
+}
+
+@media only screen and (max-width:420px){
+h1.favoritas{
+  width: 60%;
+  left: 19.5%;
+}
+ul#favs.uk-slider-items.uk-grid.uk-grid-match{
+  position: relative;
+  left: 0px !important;
+
+}
+li.uk-active{
+  position: relative;
+  left: 250;
+}
+}
+@media only screen and (min-width:421px) and (max-width:800px){
+
+h1.favoritas{
+  width: 50%;
+  left:24.5%;
+}
+ul#favs.uk-slider-items.uk-grid.uk-grid-match{
+  position: relative;
+  left: -200px !important;
+
+}
+li.uk-active{
+  position: relative;
+  left: 250;
+}
+section.peliculas-favoritas{
+  height: 800px;
+}
+div.uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-container{
+  height: 400px;
+}
+}

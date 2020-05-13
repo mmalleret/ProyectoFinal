@@ -1,0 +1,103 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+}
+/* header */
+
+header nav{
+  background-color:#F9C719;
+  font-family: sans-serif;
+  height:100px;
+}
+nav img{
+  height: 100px !important;
+  position: relative;
+  top:-2px;
+  left:-15px;
+}
+
+header form input{
+  margin-left: 10px;
+}
+header div.login button{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/*header*/
+/*alerta*/
+
+.alert {
+  position: absolute;
+  top: 25px;
+  width: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: none;
+  z-index: 10;
+}
+/*alerta*/
+#vamos{
+  float:left;
+  margin-right: 5%;
+}
+#modalCss{
+ position: relative;
+}
+.miBoton{
+  position: absolute;
+  right: 1%;
+  top: 3%;
+  background-color: white;
+  border: 0.5px solid black;
+
+}
+/*main section*/
+h1.titulos-peliculas{
+  font-family: sans-serif;
+  font-size: 3vh;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 3px #F9C719;
+  color: #F9C719;
+  background-color: black;
+  padding: 1%;
+  text-align: center;
+  width: 28%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  position: relative;
+  left: 37.5%;
+
+}
+
+.display-none{
+  display: none;
+}
+footer{
+  margin-top: 2%;
+}
+/*main section*/
+
+/*****MEDIA QUERIES*****/
+@media only screen and (max-width:420px){
+h1.titulos-peliculas{
+  font-size: 3vh;
+  width: 60%;
+  position: relative;
+  left: 17%;
+  margin: 3%;
+}
+}
+@media only screen and (min-width:421px) and (max-width:800px){
+h1.titulos-peliculas{
+  font-size:3.5vh;
+  width: 60%;
+  position: relative;
+  left: 17.5%;
+  margin:3%;
+}
+}

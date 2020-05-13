@@ -1,0 +1,99 @@
+#vamos{
+  float:left;
+  margin-top: 1%;
+  margin-right: 1%;
+}
+
+#modalCss{
+ position: relative;
+
+}
+.divBotones{
+  overflow: hidden;
+}
+.miBoton{
+  position: absolute;
+  right: 1%;
+  top: 3%;
+  background-color: white;
+  border: 0.5px solid black;
+}
+#cancelar{
+  float: left;
+  margin-right: 1%;
+  margin-top: 1%;
+}
+#reco{
+  margin-top: 1%;
+}
+.listaDeModal{
+  list-style: none;
+}
+#anchor{
+  text-decoration: none;
+  color: black;
+
+}
+
+div.recomendadas h2{
+font-family: sans-serif;
+font-size: 3vh;
+padding: 1%;
+align-items: center;
+text-align: center;
+margin-top: 2%;
+border-style: solid;
+position: relative;
+
+
+}
+/* esto es para el modal del login */
+#botonDeLogin{
+  text-decoration: none;
+  color: black;
+}
+@media only screen and (max-width:420px){
+div.iframe{
+  margin-right: 1%;
+  margin-left: 0%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+iframe{
+  width: 250px;
+  height: 200px;
+
+}
+
+div.las-recomendadas{
+  width: 90px;
+  length: 75px;
+  float: left;
+
+}
+h2.h2{
+  font-size: 1em;
+}
+.el-titular{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#vamos{
+
+  font-size: .800rem;
+
+}
+#cancelar{
+  font-size: .800rem;
+  margin-left: 0%;
+}
+.el-resumen .laFecha .puntosPeli .laLista .deLaLista {
+  font-size: 0.5em;
+}
+
+#modal-example{
+  height: 100vh;
+  font-family: 'Merriweather', serif;
+
+}
+}

@@ -1,0 +1,84 @@
+main {
+  overflow: hidden;
+}
+
+div .generos {
+  float: left;
+  margin:2%;
+}
+
+div.general{
+  width: 22.5%;
+  margin-bottom: 20px;
+}
+
+div.general img {
+  width: 100%;
+}
+
+div.noMeFunciona {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#modal-example {
+  font-family: sans-serif;
+
+
+}
+.titulogenre{
+  font-family: sans-serif;
+  font-size: 3vh;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 3px #F9C719;
+  color: #F9C719;
+  background-color: black;
+  padding: 1%;
+  text-align: center;
+  width: 28%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  position: relative;
+  left: 37.5%;
+}
+
+
+/*****MEDIA QUERIES*****/
+
+
+
+@media only screen and (max-width:420px){
+h2.titulogenre{
+  font-size: 3vh;
+  width: 60%;
+  position: relative;
+  left: 17%;
+  margin: 3%;
+}
+
+div.general{
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+
+}
+
+
+@media only screen and (min-width:421px) and (max-width:800px){
+h2.titulogenre{
+  font-size:3.5vh;
+  width: 60%;
+  position: relative;
+  left: 17.5%;
+  margin:3%;
+}
+div.general{
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+
+}
