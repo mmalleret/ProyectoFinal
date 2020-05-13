@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+     <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <!-- //<bootstrap css>// -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--//<uikit css>//-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+    <!--//<uikit javascript>//-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    <!--css-->
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/resultados.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+  </head>
+  <body>
+
+      <div class="alert alert-light" role="alert">
+        Ey Capo! Mínimo 3 caractéres!!!!
+      </div>
+
+      <!-- Modal n1 login -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Usuario</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class="formulario-login" action="index.html" method="post">
+                  <!--formulario login-->
+                  <div class="form-group">
+                    <label for="inputName">Nombre de usuario</label>
+                    <div></div>
+                    <input type="text" name="inputName" class="form-control-nombre" id="exampleInputName" aria-describedby="emailHelp" placeholder="Escribí tu nombre..." required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email"> Mail </label>
+                    <input type="email" name="inputEmail" class="form-control" id="exampleFormEmail" placeholder="Escribí tu mail..." required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1"> Género </label>
+                       <select class="form-control" id="exampleFormControlSelect1" name="sexo">
+                          <option value="fem"> Femenino
+                          </option>
+                          <option value="mal">Masculino
+                          </option>
+                          <option value="oth">Otro
+                          </option>
+                      </select>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Aceptar términos y condiciones.</label>
+                  </div>
+                  <br>
+                </form>
+                <!--formulario login-->
+            </div>
+            <div class="modal-footer">
+              <button id="cerrar" type="button" class="btn btn-outline-dark" data-dismiss="modal">Cerrar</button>
+              <button id="singIn" type="button" class="btn btn-outline-warning">
+                <a id="botonDeLogin"href="home.html">Ingresar</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!--nav bar -->
+       <header>
+         <nav class="navbar navbar-expand-lg navbar-light">
+          <img src="imagenes/logo.png" alt="" height="100px">
+          <form class="form-inline my-2 my-lg-0 form-buscar" action="resultado.html" method="get">
+            <i class="fas fa-search"></i>
+            <input id="buscador"class="form-control mr-sm-2" type="text" name="buscador" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+          </form>
+          <div class="login">
+            <button id="botonLog" type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">
+            Login
+            </button>
+          </div>
+          <div class="logout display-none">
+            <button id="botonLogOut" type="button" class="btn btn-outline-dark">
+            Logout
+        </button>
+          </div>
+          <div class="nombreDeUsuario"></div>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span id="toggler"class="navbar-toggler-icon"></span>
+           </button>
+
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item active">
+           <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Géneros
+           </a>
+           <div class="dropdown-menu listado-generos" aria-labelledby="navbarDropdown">
+
+           </div>
+
+         </li>
+
+         <li class="nav-item active favoritos">
+           <a class="nav-link" href="Favoritos.html">Favoritos<i class="fas fa-star"></i><span class="sr-only">(current)</span></a>
+         </li>
+       </ul>
+
+       <!-- Button trigger modal -->
+
+       </div>
+     </div>
+   </nav>
+   <!--header-->
+       </header>
+    <main>
+
+
+     <div class="resultspelis">
+        <div class="pelis">
+         <h1 class="titulo-pelis-buscador"></h1>
+        </div>
+     </div>
+
+  <!-- This is the modal -->
+  <!--<este es el modal que usamos para poner las decripciones y nombres de las peliculas, hay un solo modal que cambia su contenido por carrousel>-->
+  <div id="modal-example" uk-modal>
+      <div class="uk-modal-dialog uk-modal-body" id="modalCss">
+          <h2 class="uk-modal-title el-titular">Headline</h2>
+          <div id="elDivFav" class="display-none"> </div>
+          <p class="el-resumen">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="uk-text-right">
+            <div id="elVerMas" class="display-none">
+            <p class="laFecha"> </p>
+            <p class="puntosPeli"> </p>
+            <p class="generoDe"> </p>
+            <p class="laLista"> </p>
+            <div class="iframe">
+
+            </div>
+             <div class="recomendadas">
+               <h2>Películas Recomendadas</h2>
+               <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider id="carrousel-modal">
+
+                 <ul id="carrousel-recomendadas" class="uk-slider-items uk-child-width-1 uk-child-width-1-3@s uk-child-width-1-4@m">
+                     <!-- el contenido esta en javascript-->
+                 </ul>
+                 <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                 <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+               </div>
+             </div>
+            </div>
+            <div class="divBotones">
+
+              <button class="uk-button uk-button-default" id="vamos">Ver más</button>
+              <button class="uk-button uk-button-default uk-modal-close" id="cancelar" type="button">Cerrar</button>
+            </div>
+
+
+        </p>
+
+      </div>
+     </div>
+
+    </main>
+
+    <footer>
+    <ul class="footer">
+      <li class="img-footer"><img src="Imagenes/logo.png" alt="Logo the movie db" class="logo-footer"></li>
+      <li class="footer">
+        <ul class="redes">
+          <h6 class="titulos-redes">Seguinos en</h6>
+           <ul class = "iconos-redes">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter-square"></i>
+          </ul>
+        </ul>
+        <ul class="descargas">
+          <h6 class="titulos-descargas">Descargá la App acá!</h6>
+            <ul class = "iconos-descargas">
+           <i class="fab fa-app-store"></i>
+           <i class="fab fa-android"></i>
+         </ul>
+        </ul>
+      </li>
+    </ul>
+      <section class="nombres-footer">
+        <h3 class="nombres-footer">Credits:</h3><h3 class="nombres-footer">Belén Flecha - </h3><h3 class="nombres-footer">Milagros Malleret - </h3><h3 class="nombres-footer">Martina Vanderusten</h3>
+        <img src="Imagenes/powered_by_tmdb.png" class="logo-tmdb">
+      </section>
+    </footer>
+  </body>
+  </html>
+  <script type="text/javascript" src="js/buscador.js">
+
+  </script>
+   <script type="text/javascript" src="js/resultados.js">
+
+   </script>
+   <script type="text/javascript" src="js/generos.js">
+   </script>
+   <script type="text/javascript" src="js/funciones.js">
+
+   </script>
