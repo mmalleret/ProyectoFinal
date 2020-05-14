@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <!--fontawesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <!-- google fonts -->
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <!-- //<bootstrap css>// -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--//<uikit css>//-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
-    <!--//<uikit javascript>//-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+<%- include('./partials/header')  %>
     <!-- //css// -->
     <link rel="stylesheet" href="/stylesheets/home.css">
     <link rel="stylesheet" href="/stylesheets/favoritos.css">
@@ -187,44 +167,9 @@
 
 
 
-        <footer>
-        <ul class="footer">
-          <li class="img-footer"><img src="/images/logo.png" alt="Logo the movie db" class="logo-footer"></li>
-          <li class="footer">
-            <ul class="redes">
-              <h6 class="titulos-redes">Seguinos en</h6>
-               <ul class = "iconos-redes">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter-square"></i>
-              </ul>
-            </ul>
-            <ul class="descargas">
-              <h6 class="titulos-descargas">Descargá la App acá!</h6>
-                <ul class = "iconos-descargas">
-               <i class="fab fa-app-store"></i>
-               <i class="fab fa-android"></i>
-             </ul>
-            </ul>
-          </li>
-        </ul>
-          <section class="nombres-footer">
-            <h3 class="nombres-footer">Credits:</h3><h3 class="nombres-footer">Belén Flecha - </h3><h3 class="nombres-footer">Milagros Malleret - </h3><h3 class="nombres-footer">Martina Vanderusten</h3>
-            <img src="/images/powered_by_tmdb.png" class="logo-tmdb">
-          </section>
-        </footer>
-      </body>
-    </html>
-      <script type="text/javascript" src="/javascripts/buscador.js">
+<%- include('./partials/footer')  %> 
 
-      </script>
-      <script type="text/javascript" src="/javascripts/home.js">
-      </script>
-      <script type="text/javascript" src="/javascripts/generos.js">
-      </script>
+ <script type="text/javascript" src="/javascripts/home.js"> </script>
 
-        <script type="text/javascript" src="/javascripts/funciones.js">
-      </script>
-      <script type="text/javascript" src="/javascripts/favoritos.js">
-
-      </script>
+ <script type="text/javascript" src="/javascripts/favoritos.js"> </script>
+     
