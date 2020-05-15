@@ -50,7 +50,7 @@ window.addEventListener("load", function(){
              }
              var laLista = '<p class=laLista><u>Generos</u>:</p><ul class="fa-ul">'
              for (var i=0; i< arrayDeGeneros.length; i++){
-                laLista += '<li class="listaDeModal"><span class="fa-li" ><i class="fas fa-ticket-alt"></i></span><a id="anchor" href="listado.html?genero='+arrayDeGeneros[i].id+'&nombre=' + arrayDeGeneros[i].name + '">' + arrayDeGeneros[i].name + '</a></li>'
+                laLista += '<li class="listaDeModal"><span class="fa-li" ><i class="fas fa-ticket-alt"></i></span><a id="anchor" href="/peliculas/listado?genero='+arrayDeGeneros[i].id+'&nombre=' + arrayDeGeneros[i].name + '">' + arrayDeGeneros[i].name + '</a></li>'
              }
 
              laLista += '</ul>'
