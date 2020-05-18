@@ -31,8 +31,15 @@ window.addEventListener("load", function(){
          pelicula = arrayDePelis[pos]
          titulo = pelicula.title
          resumen = pelicula.overview
+         fetch('/peliculas/resenia/' + id)
+         .then(function(res){
+           return res.json()
+         })
+         .then(function(resenias){
+          console.log(resenias)
+        })
 
-
+        // tenemos que hacer como lo que esta en la linea 43, en la linea 39 con resenias
          document.querySelector(".el-titular").innerHTML = titulo
          document.querySelector(".el-resumen").innerHTML = resumen
          document.querySelector("#elVerMas").style.display = "none"

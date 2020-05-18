@@ -1,4 +1,4 @@
-//let db = require("../database/models/index");
+let db = require("../db/models/index");
 
 
 let peliculasController = {
@@ -26,6 +26,16 @@ let peliculasController = {
             
         })
 
+    },
+    listreviews: function(req,res){
+        db.Resenia.findAll({
+            where:[
+                { id_pelicula:req.params.idpelicula }
+            ]
+        })
+        .then(function(pelis){
+            res.send(pelis)
+        })
     }     
 
 };

@@ -8,7 +8,7 @@ router.get('/listado', peliculasController.list);
 router.get('/resultado', peliculasController.results);
 router.get('/favoritos', peliculasController.favourites);
 router.get('/login', usuariosController.login);
-
+router.get('/resenia/:idpelicula', peliculasController.listreviews)
 
 
 module.exports = router;
