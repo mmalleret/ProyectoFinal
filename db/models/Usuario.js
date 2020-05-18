@@ -33,6 +33,13 @@ module.exports = (sequelize, DataTypes) => {
     }
     
     const Usuario = sequelize.define("Usuario", cols, config);
+    
+    Usuario.associate = function(models) {
+        Usuario.hasMany(models.Resenia, {
+            as: "resenias",
+            foreignKey: "id_usuarios"
+        });
+    }
     return Usuario
 
 }
