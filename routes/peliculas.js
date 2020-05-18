@@ -7,7 +7,9 @@ router.get('/', peliculasController.home);
 router.get('/listado', peliculasController.list);
 router.get('/resultado', peliculasController.results);
 router.get('/favoritos', peliculasController.favourites);
-router.get('/login', usuariosController.login);
+router.get('/registrarse', usuariosController.register);
+router.post('/registrarse', usuariosController.save);
+router.get('/resultadoUsuario', usuariosController.search);
 router.get('/resenia/:idpelicula', peliculasController.listreviews)
 
 

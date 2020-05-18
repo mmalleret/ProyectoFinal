@@ -31,6 +31,7 @@ window.addEventListener("load", function(){
          pelicula = arrayDePelis[pos]
          titulo = pelicula.title
          resumen = pelicula.overview
+         
          fetch('/peliculas/resenia/' + id)
          .then(function(res){
            return res.json()

@@ -36,6 +36,12 @@ ul.navbar-nav.mr-auto{
   right: 5%;
   top:31%;
 }
+#botonBu{
+  position: absolute;
+  right: 50%;
+  top:31%;
+}
+
 #botonLogOut{
   position: absolute;
   right: 5%;

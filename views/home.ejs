@@ -12,58 +12,6 @@
       Ey Capo! Mínimo 3 caractéres!!!!
     </div>
 
-
-    <!-- Modal n1 login -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Usuario</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="formulario-login" action="index.html" method="post">
-                <!--formulario login-->
-                <div class="form-group">
-                  <label for="inputName">Nombre de usuario</label>
-                  <div></div>
-                  <input type="text" name="inputName" class="form-control-nombre" id="exampleInputName" aria-describedby="emailHelp" placeholder="Escribí tu nombre..." required>
-                </div>
-                <div class="form-group">
-                  <label for="email"> Mail </label>
-                  <input type="email" name="inputEmail" class="form-control" id="exampleFormEmail" placeholder="Escribí tu mail..." required>
-                </div>
-                <div class="form-group">
-                  <label for="exampleFormControlSelect1"> Género </label>
-                     <select class="form-control" id="exampleFormControlSelect1" name="sexo">
-                        <option value="fem"> Femenino
-                        </option>
-                        <option value="mal">Masculino
-                        </option>
-                        <option value="oth">Otro
-                        </option>
-                    </select>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Aceptar términos y condiciones.</label>
-                </div>
-                <br>
-              </form>
-              <!--formulario login-->
-          </div>
-          <div class="modal-footer">
-            <button id="cerrar" type="button" class="btn btn-outline-dark" data-dismiss="modal">Cerrar</button>
-            <button id="singIn" type="button" class="btn btn-outline-warning">
-              <!--el href tiene que ir ahora hacia la ruta peliculas-->
-              <a id="botonDeLogin" href="/peliculas">Ingresar</a></button>
-          </div>
-        </div>
-      </div>
-    </div>
-
      <!--nav bar -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
@@ -74,16 +22,24 @@
          <button id="botonBuscar" class="btn btn-outline-dark" type="submit">Buscar</button>
        </form>
        <div class="login">
-         <button id="botonLog" type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">
-         Login
-         </button>
+        <a href="/peliculas/registrarse">
+           <button id="botonLog" type="button" class="btn btn-outline-dark">
+             Registrarse
+           </button>
+        </a>
+      </div>
+       <div class="login">
+        <a href="/peliculas/resultadoUsuario">
+           <button id="botonBu" type="button" class="btn btn-outline-dark">
+             Buscador Usuarios
+           </button>
+        </a>
        </div>
        <div class="logout display-none">
          <button id="botonLogOut" type="button" class="btn btn-outline-dark">
          Logout
      </button>
        </div>
-       <div class="nombreDeUsuario"></div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
          <span id="toggler"class="navbar-toggler-icon"></span>
         </button>
@@ -105,9 +61,9 @@
       </li>
 
       <li class="nav-item active favoritos">
-        <!--el href tiene que ir ahora hacia la ruta peliculas-->
         <a class="nav-link" href="/peliculas/favoritos">Favoritos<i class="fas fa-star"></i><span class="sr-only">(current)</span></a>
       </li>
+    
     </ul>
 
     <!-- Button trigger modal -->
