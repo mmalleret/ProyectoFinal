@@ -1,6 +1,6 @@
 let db = require("../db/models/index");
 let bcrypt = require("bcryptjs");
-let operadores = db.Sequelize.Op;
+let op = db.Sequelize.Op;
 
 let usuariosController = {
 
@@ -27,18 +27,44 @@ let usuariosController = {
         })
             
     },
-    search:function(req, res){
-        let usuarios = []
-        nombre = req.query.buscarUsuario
-        res.send(nombre)
-    if ( req.query tiene algo en la busqueda) {
-     busco usuarios y mando a la vista
-     }
-     else {
+    search: function(req, res){
+                  
+            if (req.query.hasOwnProperty("buscarUsuario")) {
+
+                db.Usuario.findAll({ 
+                    where: {
+                        [op.or]: [
+                            { nombre: { [op.like]: "%" + req.query.buscarUsuario + "%" }},
+                            { email: { [op.like]: "%" + req.query.buscarUsuario + "%" }}
+                        ]
+                    }
+                })
+                .then(function(resultado){
+                    
+                    res.render("resultadoUsuario", {
+                        elUsuarioBuscado: resultado,
+                        seHizoUnaBusqueda: true
+                    })
+
+                })
+            }
+            else {
+                res.render("resultadoUsuario", {
+                    seHizoUnaBusqueda: false
+                })
+            }
+    },
+    detail: function(req, res){
+        db.Usuario.findByPk(req.params.idUser)
+        .then(function(resultado){
+            res.render("detalleUsuario", {
+                usuario: resultado
+            
+            })
+
+        })
+    
     }
-        res.render("resultadoUsuario", {
-           
-        })},
        
 
     
