@@ -1,5 +1,6 @@
 let db = require("../db/models/index");
 let bcrypt = require("bcryptjs");
+let operadores = db.Sequelize.Op;
 
 let usuariosController = {
 
@@ -27,15 +28,22 @@ let usuariosController = {
             
     },
     search:function(req, res){
-        db.Usuario.findAll()
+        let usuarios = []
+        nombre = req.query.buscarUsuario
+        res.send(nombre)
+    if ( req.query tiene algo en la busqueda) {
+     busco usuarios y mando a la vista
+     }
+     else {
+    }
+        res.render("resultadoUsuario", {
+           
+        })},
+       
 
-            .then(function(usuarios) {
-               res.send(usuarios)
-            })
-            .catch((e) => {
-                res.send(e)
-            })
-        },
+    
+
+    
 
     
 };
