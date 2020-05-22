@@ -57,7 +57,7 @@ window.addEventListener("load", function(){
         document.querySelector("#elVerMas").style.display = "none"
         document.querySelector("#vamos").style.display = "block"
         document.querySelector("#vamos").setAttribute("idPelicula", id)
-        document.querySelector("#elDivFav").innerHTML ='<button class="miBoton" id="botonFavoritos" name="' + id+ '"> &#9733; </button>'
+        document.querySelector("#elDivFav").innerHTML ='<button class="miBoton" id="botonFavoritos" name="' + id + '"> &#9733; </button>'
         var boton = document.querySelector('#botonFavoritos')
         // document.querySelector ("#botonFavoritos").style.display= "none"
         boton.addEventListener("click", function(){

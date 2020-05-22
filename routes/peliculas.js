@@ -11,7 +11,8 @@ router.get('/registrarse', usuariosController.register);
 router.post('/registrarse', usuariosController.save);
 router.get('/resultadoUsuario', usuariosController.search);
 router.get('/detalleUsuario/:idUser', usuariosController.detail);
-router.get('/resenia/:idpelicula', peliculasController.listreviews)
-
+router.get('/resenias/:idpelicula', peliculasController.listreviews);
+router.get('/agregarResenia', peliculasController.add);
+router.post('/agregarResenia', peliculasController.addReview)
 
 module.exports = router;

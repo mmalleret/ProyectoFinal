@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/peliculas/registrarse" method="POST">
+        
+        <div>
+            <label for="">Email</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="">Contraseña</label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label for="">Reseña</label>
+            <input type="text" name="reseniaTexto">
+        </div>
+        <div>
+            <label for="">Puntaje</label>
+            <input type="number" name="puntaje" min="0" max="10">
+        </div>
+
+        
+        <input type="submit" value="Enviar">
+    </form> 
+</body>
+</html>

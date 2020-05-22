@@ -36,7 +36,23 @@ let peliculasController = {
         .then(function(pelis){
             res.send(pelis)
         })
-    }     
+    }, 
+    add: function(req, res){
+        res.render('agregarResenia')
+    },
+    addReview: function(req, res){
+        let resenia  = {
+                    texto_de_resenia: req.body.reseniaTexto,
+                    puntaje: req.body.puntaje,
+                }
+        
+            
+            // Guardarla en base de datos....
+            db.Resenia.create(resenia)
+            .then(() => {
+                res.redirect('/pelicula/agregarResenia')
+            })
+    }      
 
 };
 module.exports = peliculasController

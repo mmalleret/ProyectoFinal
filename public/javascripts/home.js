@@ -32,12 +32,19 @@ window.addEventListener("load", function(){
          titulo = pelicula.title
          resumen = pelicula.overview
          
-         fetch('/peliculas/resenia/' + id)
+         fetch('/peliculas/resenias/' +id)
          .then(function(res){
            return res.json()
          })
          .then(function(resenias){
-          console.log(resenias)
+          for (var i = 0; i < resenias.length; i++) {
+              reseniaHTML = "<div>"
+              reseniaHTML += resenia.nombre
+              reseniaHTML += resenia.puntaje
+              reseniaHTML += resenia.texto_de_resenia
+              reseniaHTML += "</div>"
+              document.querySelector.innerHTML += reseniaHTML
+              }
         })
 
         // tenemos que hacer como lo que esta en la linea 43, en la linea 39 con resenias
