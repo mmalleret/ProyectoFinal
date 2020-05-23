@@ -2,6 +2,7 @@ let db = require("../db/models/index");
 let bcrypt = require("bcryptjs");
 let op = db.Sequelize.Op;
 
+
 let usuariosController = {
 
     register: function(req, res){
