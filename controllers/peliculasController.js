@@ -1,6 +1,26 @@
 let db = require("../db/models/index");
 let moduloLogin = require('../modulo-login');
 
+//terminar con la validacion// 
+function validacion(email) {
+ moduloLogin.chequearUsuario(req.body.email)
+ .then(resultado => {
+     if (resultado == true){
+         moduloLogin.validar(req.body.email, req.body.password)
+        .then(resultado => {
+         if ('esto coincide'){
+             //lo vas a crear 
+         } else {
+             'no coinciden el usuario y la contrasenia'
+         }   
+        }) 
+     } else { 
+         res.redirect('/peliculas/registrarse')
+
+     }
+ })
+}
+
 let peliculasController = {
 
     home: function(req, res){
@@ -54,7 +74,8 @@ let peliculasController = {
             
 
         
-        } 
+        }
+
             // Guardarla en base de datos....
             db.Resenia.create(resenia)
             .then(() => {
@@ -70,6 +91,55 @@ let peliculasController = {
         })
 
     }, 
+    validationForm: function(req, res){
+        moduloLogin.buscarPorEmail(req.body.email)    
+        .then(resultado => {
+            let id  = {
+                usuario: resultado.idusuarios}
+                
+                db.Resenia.findAll({
+                    where:[
+                        { id_usuarios: id.usuario }
+                    ]
+                })
+                .then(respuesta => {
+                     res.render("misResenias", {
+                            respuesta: respuesta
+                        })
+                })
+            
+            })
+     
+            
+    
+    }, 
+    edit : function(req, res){
+        res.render('editar',{
+            
+        })
+
+    }, 
+    editReview : function(req, res){
+        res.render('editar',{
+            
+        })
+
+    }, 
+    delete : function(req, res){
+        res.render('delete',{
+            
+        })
+
+    }, 
+    deleteReview : function(req, res){
+        res.render('delete',{
+            
+        })
+
+    }, 
+
+    
+    
      
 
 };

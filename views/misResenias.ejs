@@ -6,7 +6,39 @@
     <title>Document</title>
 </head>
 <body>
-    hola
-    
+    <form action="/peliculas/misResenias" method="POST">
+        <div>
+            <label for="">Email</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="">Contraseña</label>
+            <input type="password" name="password">
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+    <h1>mis resenias</h1>
+    <% for (let i = 0; i < respuesta.length; i++) { %>
+        <li>
+            <%=respuesta[i].texto_de_resenia%>,<%=respuesta[i].createdAt%>, <%=respuesta[i].puntaje%>, <%=respuesta[i].id_pelicula%>, 
+        </li>
+        <div>
+            <a href="/peliculas/editar/<%=respuesta[i].id_pelicula%>">
+                <button  type="button">
+                  editar 
+                </button>
+             </a>
+        </div>
+        <br>
+        <div>
+            <a href="/peliculas/borrar/<%=respuesta[i].id_pelicula%>">
+                <button  type="button">
+                  borrar 
+                </button>
+             </a>
+        </div>
+        <br>
+
+    <% } %>
 </body>
 </html>

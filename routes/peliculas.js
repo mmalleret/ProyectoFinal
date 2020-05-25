@@ -26,8 +26,18 @@ router.get('/resenias/:idpelicula', peliculasController.listreviews);
 router.get('/agregarResenia/:idPelicula', peliculasController.add);
 router.post('/agregarResenia/:idPelicula', peliculasController.addReview)
 
-//mis reseñas 
+//mis reseñas formulario de login 
 router.get('/misResenias', peliculasController.myReviews);
+router.post('/misResenias', peliculasController.validationForm);
 
+//una vez que valide el usuario para ver mis resenias me deja verlas 
+//router.get('/verMisResenias', peliculasController.view);
 
+//editar pelicula 
+router.get('/editar/:id', peliculasController.edit);
+router.post('/editar/:id', peliculasController.editReview);
+
+//borrar pelicula
+router.get('/borrar/:id', peliculasController.delete);
+router.post('/borrar/:id', peliculasController.deleteReview);
 module.exports = router;
