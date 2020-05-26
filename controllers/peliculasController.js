@@ -1,25 +1,6 @@
 let db = require("../db/models/index");
 let moduloLogin = require('../modulo-login');
 
-//terminar con la validacion// 
-function validacion(email) {
- moduloLogin.chequearUsuario(req.body.email)
- .then(resultado => {
-     if (resultado == true){
-         moduloLogin.validar(req.body.email, req.body.password)
-        .then(resultado => {
-         if ('esto coincide'){
-             //lo vas a crear 
-         } else {
-             'no coinciden el usuario y la contrasenia'
-         }   
-        }) 
-     } else { 
-         res.redirect('/peliculas/registrarse')
-
-     }
- })
-}
 
 let peliculasController = {
 
@@ -87,28 +68,30 @@ let peliculasController = {
     },
     myReviews: function(req, res){
         res.render('misResenias',{
-            
+        respuesta:[]    
         })
 
     }, 
-    validationForm: function(req, res){
-        moduloLogin.buscarPorEmail(req.body.email)    
-        .then(resultado => {
-            let id  = {
+    validationForm: async function(req, res){
+        let resultado = await moduloLogin.validar(req.body.email, req.body.password)    
+            if (resultado != null){ 
+                let id  = {
                 usuario: resultado.idusuarios}
                 
-                db.Resenia.findAll({
+                let respuesta = await db.Resenia.findAll({
                     where:[
                         { id_usuarios: id.usuario }
                     ]
                 })
-                .then(respuesta => {
+               
                      res.render("misResenias", {
                             respuesta: respuesta
                         })
-                })
+                    }else{
+                        res.send("usuario invalido")
+                    }     
             
-            })
+            
      
             
     

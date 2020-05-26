@@ -37,25 +37,21 @@ window.addEventListener("load", function(){
            return res.json()
          })
          .then(function(resenias){
+          console.log(resenias)
+          document.querySelector(".reseniasPelis").innerHTML = ""
           for (var i = 0; i < resenias.length; i++) {
-              reseniasHTML += "<div>"
-              reseniasHTML += resenias.nombre
-              reseniasHTML += resenias.puntaje
-              reseniasHTML += resenias.texto_de_resenia
+              let reseniasHTML = "<div>"
+              reseniasHTML += resenias[i].texto_de_resenia
               reseniasHTML += "</div>"
-              document.querySelector.innerHTML += reseniasHTML
+              document.querySelector(".reseniasPelis").innerHTML += reseniasHTML
               }
         })
-
-
-
-
-        // tenemos que hacer como lo que esta en la linea 43, en la linea 39 con resenias
+        
          document.querySelector(".el-titular").innerHTML = titulo
          document.querySelector(".el-resumen").innerHTML = resumen
          document.querySelector("#elVerMas").style.display = "none"
          //esta linea de codigo es para agregar el id de la pelicula a la ruta 
-         document.querySelector(".jsBackPlis").innerHTML += '<a href="/peliculas/agregarResenia/' + id + '" > <button class= "uk-button uk-button-default" > Añadir reseñas </button> </a>'
+         document.querySelector(".jsBackPlis").innerHTML = '<a href="/peliculas/agregarResenia/' + id + '" > <button class= "uk-button uk-button-default" > Añadir reseñas </button> </a>'
          document.querySelector("#vamos").style.display = "block"
          document.querySelector("#vamos").setAttribute("idPelicula", id)
          document.querySelector("#elDivFav").innerHTML ='<button class="miBoton" id="botonFavoritos" name="' + id + '"> &#9733; </button>'
@@ -101,11 +97,9 @@ fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=9fe1abda2acd785b6fc8
     return respuesta.json()
   })
   .then(function(informacion){
-    console.log(informacion.results);
     var arrayDePelis = informacion.results
     for(i=0; i<12; i++){
       var url=informacion.results[i].poster_path
-      console.log(url);
       var titulo =  arrayDePelis[i].title
       var id = arrayDePelis[i].id
       var resumen = arrayDePelis[i].overview
@@ -133,7 +127,7 @@ fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=9fe1abda2acd785b6fc8
         document.querySelector(".el-resumen").innerHTML = resumen
         document.querySelector("#elVerMas").style.display = "none"
         //esta linea de codigo es para agregar el id de la pelicula a la ruta 
-        document.querySelector(".jsBackPlis").innerHTML += '<a href="/peliculas/agregarResenia/' + id + '" > <button class= "uk-button uk-button-default" > Añadir reseñas </button> </a>'
+        document.querySelector(".jsBackPlis").innerHTML = '<a href="/peliculas/agregarResenia/' + id + '" > <button class= "uk-button uk-button-default" > Añadir reseñas </button> </a>'
         document.querySelector("#vamos").style.display = "block"
         document.querySelector("#vamos").setAttribute("idPelicula", id)
         document.querySelector("#elDivFav").innerHTML ='<button class="miBoton" id="botonFavoritos" name="' + id+ '"> &#9733; </button>'
@@ -178,11 +172,9 @@ fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=9fe1abda2acd785b6fc8
      return respuesta.json()
    })
    .then(function(informacion){
-     console.log(informacion.results);
      var arrayDePelis = informacion.results
      for(i=0; i<12; i++){
        var url=informacion.results[i].poster_path
-       console.log(url);
        var titulo =  arrayDePelis[i].title
        var id = arrayDePelis[i].id
        var resumen = arrayDePelis[i].overview
@@ -210,7 +202,7 @@ fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=9fe1abda2acd785b6fc8
          document.querySelector(".el-resumen").innerHTML = resumen
          document.querySelector("#elVerMas").style.display = "none"
          //esta linea de codigo es para agregar el id de la pelicula a la ruta 
-         document.querySelector(".jsBackPlis").innerHTML += '<a href="/peliculas/agregarResenia/' + id + '" > <button class= "uk-button uk-button-default" > Añadir reseñas </button> </a>'
+         document.querySelector(".jsBackPlis").innerHTML = '<a href="/peliculas/agregarResenia/' + id + '" > <button class= "uk-button uk-button-default" > Añadir reseñas </button> </a>'
          document.querySelector("#vamos").style.display = "block"
          document.querySelector("#vamos").setAttribute("idPelicula", id)
          document.querySelector("#elDivFav").innerHTML ='<button class="miBoton" id="botonFavoritos" name="' + id+ '"> &#9733; </button>'

@@ -64,11 +64,9 @@ window.addEventListener("load", function(){
            return respuesta.json()
          })
          .then(function(peliculas){
-           console.log(peliculas.results);
            var arrayDePelis = peliculas.results
            for(var i=0; i< arrayDePelis.length; i++){
              var url= arrayDePelis[i].poster_path
-             console.log(url);
              var titulo =  arrayDePelis[i].title
              var id = arrayDePelis[i].id
              var resumen = arrayDePelis[i].overview
