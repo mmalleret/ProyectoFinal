@@ -80,7 +80,9 @@ let peliculasController = {
     },
     myReviews: function(req, res){
         res.render('misResenias',{
-        respuesta:[]    
+        respuesta:[],
+        hayresenia: false 
+
         })
     }, 
     validationForm: async function(req, res){
@@ -96,7 +98,7 @@ let peliculasController = {
                 })               
                      res.render("misResenias", {
                             respuesta: respuesta,
-                            hayresenias: true
+                            hayresenia: true
                         })
         } else {
             
@@ -112,7 +114,7 @@ let peliculasController = {
         })
     
     }, 
-    editReview : function(req, res) {
+    editReview : async function(req, res) {
         let resenia = {
             id: req.body.id_pelicula,
             puntaje: req.body.puntuacion,
@@ -120,14 +122,12 @@ let peliculasController = {
             updatedAt: req.body.fecha,
         }
 
-        db.Resenia.update(resenia, {
+        let resultado = await db.Resenia.update(resenia, {
             where: {
                 idresenia: req.params.id
             }
         })
-        .then(() => {
             res.redirect("/peliculas/misResenias")
-        })
 
     }, 
     delete : function(req, res){
@@ -136,14 +136,14 @@ let peliculasController = {
         })
 
     }, 
-    deleteReview : function(req, res){
+    deleteReview : async function(req, res){
 
-     db.Resenia.destroy({
+     let respuesta = await db.Resenia.destroy({
                 where: {
                     idresenia: req.query.id
                 }
             })
-        .then (()=>{res.redirect("/peliculas/misResenias")})
+      res.redirect("/peliculas/misResenias")
 
     }, 
 

@@ -18,8 +18,9 @@
         </div>
         <input type="submit" value="Enviar">
     </form>
-    
-    <% if (respuesta != null) { %> 
+    <% if (hayresenia == true) { %> 
+   
+      <% if (respuesta.length > 0) { %> 
     
       <h1>Mis Resenias</h1>
     
@@ -55,6 +56,10 @@
 
     <h2>No se encontraron resenias</h2>
     
+    <% } %> 
+    <% } else { %>
+      
+      
     <% } %> 
      
     
