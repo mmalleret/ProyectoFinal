@@ -1,16 +1,23 @@
 let db = require("../db/models/index");
 let moduloLogin = require('../modulo-login');
+
 async function validarAgregadoResenia(formulario) {
     let errores = [];
     let usuario = await moduloLogin.validar(formulario.email, formulario.password);
     if (usuario == null) {
         errores.push("Ey! No es valido el usuario!");
     }
+    // let registro = await moduloLogin.chequearUsuario(formulario.email)
+    // if (registro != true) {
+    //     res.redirect('/peliculas')
+    // }
     if (formulario.reseniaTexto == "") {
         errores.push("Ey! No me dejes el texto vacio!");
     }
+
     return errores;
 }
+
 let peliculasController = {
     home: function(req, res){
         res.render('home',{
@@ -78,8 +85,7 @@ let peliculasController = {
     }, 
     validationForm: async function(req, res){
         let resultado = await moduloLogin.validar(req.body.email, req.body.password)    
-        console.log(resultado)
-        res.send(resultado)
+        if(resultado != null){
             let id  = {
                 usuario: resultado.idusuarios}
                 
@@ -87,38 +93,60 @@ let peliculasController = {
                     where:[
                         { id_usuarios: id.usuario }
                     ]
-                })
-               
+                })               
                      res.render("misResenias", {
-                            respuesta: respuesta
+                            respuesta: respuesta,
+                            hayresenias: true
                         })
-                
+        } else {
             
-            
-     
-            
-    
+            res.send("usuario no valido")
+        }
     }, 
     edit : function(req, res){
-        res.render('editar',{
-            
+        db.Resenia.findByPk(req.query.id)
+        .then((resenia) => {
+            res.render("editar", {
+                resenia: resenia,
+            })
         })
+    
     }, 
-    editReview : function(req, res){
-        res.render('editar',{
-            
+    editReview : function(req, res) {
+        let resenia = {
+            id: req.body.id_pelicula,
+            puntaje: req.body.puntuacion,
+            texto_de_resenia: req.body.reseniaTexto,
+            updatedAt: req.body.fecha,
+        }
+
+        db.Resenia.update(resenia, {
+            where: {
+                idresenia: req.params.id
+            }
         })
+        .then(() => {
+            res.redirect("/peliculas/misResenias")
+        })
+
     }, 
     delete : function(req, res){
         res.render('delete',{
             
         })
+
     }, 
     deleteReview : function(req, res){
-        res.render('delete',{
-            
-        })
+
+     db.Resenia.destroy({
+                where: {
+                    idresenia: req.query.id
+                }
+            })
+        .then (()=>{res.redirect("/peliculas/misResenias")})
+
     }, 
+
     
     
      

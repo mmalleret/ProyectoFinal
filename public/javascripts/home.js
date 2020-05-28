@@ -42,6 +42,9 @@ window.addEventListener("load", function(){
           for (var i = 0; i < resenias.length; i++) {
               let reseniasHTML = "<div>"
               reseniasHTML += resenias[i].texto_de_resenia
+              reseniasHTML += resenias[i].puntaje
+              reseniasHTML += resenias[i].updatedAt
+              reseniasHTML += resenias[i].id_usuarios
               reseniasHTML += "</div>"
               document.querySelector(".reseniasPelis").innerHTML += reseniasHTML
               }
