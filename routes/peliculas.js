@@ -38,6 +38,6 @@ router.get('/editar/:id', peliculasController.edit);
 router.post('/editar/:id', peliculasController.editReview);
 
 //borrar pelicula
-router.get('/borrar/:id', peliculasController.delete);
-router.post('/borrar/:id', peliculasController.deleteReview);
+router.get('/borrar/:idBorrar', peliculasController.delete);
+router.post('/borrar/:idBorrar', peliculasController.deleteReview);
 module.exports = router;

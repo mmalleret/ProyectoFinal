@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/peliculas/borrar" method="POST">
+    <form action="/peliculas/borrar/<%=idBorrar%> " method="POST">
         <div>
             <label for="">Email</label>
             <input type="email" name="email">
@@ -15,7 +15,9 @@
             <label for="">Contraseña</label>
             <input type="password" name="password">
         </div>
-        <input type="submit" value="Borrar">
+        <input type="submit" value="Enviar">
+        
+        <button type="submit">borrar</button>
     </form>
 </body>
 </html>

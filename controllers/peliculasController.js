@@ -106,7 +106,7 @@ let peliculasController = {
         }
     }, 
     edit : function(req, res){
-        db.Resenia.findByPk(req.query.id)
+        db.Resenia.findByPk(req.params.id)
         .then((resenia) => {
             res.render("editar", {
                 resenia: resenia,
@@ -115,35 +115,45 @@ let peliculasController = {
     
     }, 
     editReview : async function(req, res) {
-        let resenia = {
-            id: req.body.id_pelicula,
-            puntaje: req.body.puntuacion,
+        let resultado = await moduloLogin.validar(req.body.email, req.body.password)    
+        if(resultado != null){
+        db.Resenia.update({
+            
+            puntaje: req.body.puntaje,
             texto_de_resenia: req.body.reseniaTexto,
-            updatedAt: req.body.fecha,
-        }
-
-        let resultado = await db.Resenia.update(resenia, {
-            where: {
-                idresenia: req.params.id
-            }
+    
+        },{ where: [
+                {idresenias: req.params.id}
+            ]
         })
-            res.redirect("/peliculas/misResenias")
+        .then(() => res.redirect("/peliculas/misResenias"))
+    } else {
+            
+        res.send("usuario no valido")
+    }
 
     }, 
     delete : function(req, res){
         res.render('delete',{
-            
+            idBorrar : req.params.idBorrar
         })
 
     }, 
     deleteReview : async function(req, res){
+        let resultado = await moduloLogin.validar(req.body.email, req.body.password)    
+        if(resultado != null){
 
-     let respuesta = await db.Resenia.destroy({
-                where: {
-                    idresenia: req.query.id
-                }
-            })
-      res.redirect("/peliculas/misResenias")
+        let respuesta = await db.Resenia.destroy({
+                    where: [
+                        {idresenias: req.params.idBorrar}
+                    ]
+                })
+        
+            res.redirect("/peliculas/misResenias")
+        } else {
+                
+            res.send("usuario no valido")
+        }
 
     }, 
 

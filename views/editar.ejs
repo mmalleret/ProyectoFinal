@@ -6,7 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/peliculas/editar" method="POST">
+    <form action="/peliculas/editar/<%=resenia.idresenias%>" method="POST">
+        
         <div>
             <label for="">Email</label>
             <input type="email" name="email">
@@ -15,7 +16,17 @@
             <label for="">Contraseña</label>
             <input type="password" name="password">
         </div>
-        <input type="submit" value="Enviar">
-    </form>
+        <div>
+            <label for="">Reseña</label>
+            <input type="text" name="reseniaTexto" value="<%=resenia.texto_de_resenia%> ">
+        </div>
+        <div>
+            <label for="">Puntaje</label>
+            <input type="number" name="puntaje" min="0" max="10" value="<%=resenia.puntaje%>">
+        </div>
+
+        
+        <input type="submit" value="Editar">
+    </form> 
 </body>
 </html>
