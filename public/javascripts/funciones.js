@@ -104,52 +104,52 @@ window.addEventListener("load", function(){
 
 }}
 //validando los datos de login//
-  var login = document.querySelector("#singIn");
-    login.onclick = function (event){
-      event.preventDefault()
-      var email = document.querySelector('input[name="inputEmail"]');
-      var nombre = document.querySelector('input[name="inputName"]');
-        if (email.value==""){
-          UIkit.notification({message: 'Dejaste el email vacio', status: 'danger'})
-        }
-        if (!validateEmail(email.value)) {
-          UIkit.notification({message: 'Eh gato, escribi un mail legal', status: 'danger'})
-        }
-        if (nombre.value=="") {
-         UIkit.notification({message: 'No completaste tu nombre', status: 'danger'})
-        }
+//   var login = document.querySelector("#singIn");
+//     login.onclick = function (event){
+//       event.preventDefault()
+//       var email = document.querySelector('input[name="inputEmail"]');
+//       var nombre = document.querySelector('input[name="inputName"]');
+//         if (email.value==""){
+//           UIkit.notification({message: 'Dejaste el email vacio', status: 'danger'})
+//         }
+//         if (!validateEmail(email.value)) {
+//           UIkit.notification({message: 'Eh gato, escribi un mail legal', status: 'danger'})
+//         }
+//         if (nombre.value=="") {
+//          UIkit.notification({message: 'No completaste tu nombre', status: 'danger'})
+//         }
 
 
-//si los datos son correctos, guardarlos//
-      if (nombre.value != "") {
-          document.querySelector("#botonLog").click()
-          window.localStorage.setItem("usuario", nombre.value)
-          window.sessionStorage.setItem("usuario", nombre.value)
-          mostrarInfoLogin(nombre.value)
-          //cuando me logueo debo iniciar el array donde voy a guardar las pelis preferidas
-          var arrayDePelisFavoritas = []
-          console.log(arrayDePelisFavoritas);
-          window.sessionStorage.setItem('arrayDePelisFavoritas', JSON.stringify(arrayDePelisFavoritas))
-        }
-      }
+// //si los datos son correctos, guardarlos//
+//       if (nombre.value != "") {
+//           document.querySelector("#botonLog").click()
+//           window.localStorage.setItem("usuario", nombre.value)
+//           window.sessionStorage.setItem("usuario", nombre.value)
+//           mostrarInfoLogin(nombre.value)
+//           //cuando me logueo debo iniciar el array donde voy a guardar las pelis preferidas
+//           var arrayDePelisFavoritas = []
+//           console.log(arrayDePelisFavoritas);
+//           window.sessionStorage.setItem('arrayDePelisFavoritas', JSON.stringify(arrayDePelisFavoritas))
+//         }
+//       }
 //si el campo de login ya esta completo saludar al usuario//
-      if (sessionStorage.getItem("usuario") != null) {
-      mostrarInfoLogin(sessionStorage.getItem("usuario"))
-      var usuario = "usuario"
-      }
-      function mostrarInfoLogin(nombreUsuario) {
-        var nuevo = document.querySelector ('.nombreDeUsuario')
-        nuevo.style.backgroundColor = "black"
-        nuevo.innerHTML = "Bienvenido " +  nombreUsuario +" "+'<i class="fas fa-user"></i>'
-        document.querySelector ("#botonLog").style.display = "none"
-        document.querySelector(".favoritos").style.display = "block"
-        document.querySelector("#elDivFav").classList.remove("display-none")
-        document.querySelector ("div.logout").classList.remove("display-none")
-        }
-        document.querySelector("#botonLogOut").onclick = function() {
-          window.sessionStorage.clear("usuario");
-          window.location.reload()
-        }
+      // if (sessionStorage.getItem("usuario") != null) {
+      // mostrarInfoLogin(sessionStorage.getItem("usuario"))
+      // var usuario = "usuario"
+      // }
+      // function mostrarInfoLogin(nombreUsuario) {
+      //   var nuevo = document.querySelector ('.nombreDeUsuario')
+      //   nuevo.style.backgroundColor = "black"
+      //   nuevo.innerHTML = "Bienvenido " +  nombreUsuario +" "+'<i class="fas fa-user"></i>'
+      //   document.querySelector ("#botonLog").style.display = "none"
+      //   document.querySelector(".favoritos").style.display = "block"
+      //   document.querySelector("#elDivFav").classList.remove("display-none")
+      //   document.querySelector ("div.logout").classList.remove("display-none")
+      //   }
+      //   document.querySelector("#botonLogOut").onclick = function() {
+      //     window.sessionStorage.clear("usuario");
+      //     window.location.reload()
+      //   }
 
 
 

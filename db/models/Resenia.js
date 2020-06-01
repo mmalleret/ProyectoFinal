@@ -20,6 +20,16 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
 
         }, 
+        createdAt :{
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
+
+        },
+        updatedAt :{
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
+
+        }
     }
     let config = {
         tableName: "resenias", 
