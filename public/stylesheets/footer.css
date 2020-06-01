@@ -5,11 +5,14 @@
 footer {
   background-color: #578DFF;
   background-color: black;
+  padding-bottom: 20px;
 }
 ul.footer{
+  background-color: black;
   height: 8%;
   list-style-type: none;
   overflow: hidden;
+  margin: 0px;
 }
 img.logo-footer{
   float: left;
@@ -21,9 +24,9 @@ img.logo-footer{
   border-radius: 5px;
 }
 li.footer{
+
   overflow: hidden;
   position: relative;
-  left: 700px;
   top:25px;
 }
 ul.redes{
@@ -68,14 +71,6 @@ h6.titulos-descargas{
   font-size: .875rem;
   color: #578DFF;
 }
-
-section.nombres-footer{
-  height:64px;
-  border-top: 3px solid rgba(249,249,249,0.5);
-  overflow: hidden;
-  position: relative;
-  
-}
 h3.nombres-footer{
   font-family: sans-serif;
   float: left;
@@ -85,17 +80,19 @@ h3.nombres-footer{
   margin-top: 5px;
   margin-bottom: 15px;
   color: white;
+
 }
 img.logo-tmdb{
   float: left;
   width: 8%;
-  height: 73%;
+  height: 12%;
   border-radius: 3px;
   border: 3px white;
-  margin-top: 5px;
-  position: absolute;
-  right:5px;
+  margin-top: 30px;
+  position: relative;
+  left:-275px;
 }
+
 /*footer*/
 
 /*****MEDIA QUERIES*****/
