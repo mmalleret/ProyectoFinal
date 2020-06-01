@@ -3,14 +3,17 @@ let moduloLogin = require('../modulo-login');
 
 async function validarAgregadoResenia(formulario) {
     let errores = [];
+    let registro = await moduloLogin.chequearUsuario(formulario.email)
+    if (registro != true) { //en la posision 0 avisa que el email no existe
+     errores.push("No existe el mail")
+     return errores
+    }
+    
     let usuario = await moduloLogin.validar(formulario.email, formulario.password);
     if (usuario == null) {
         errores.push("Ey! No es valido el usuario!");
     }
-    // let registro = await moduloLogin.chequearUsuario(formulario.email)
-    // if (registro != true) {
-    //     res.redirect('/peliculas')
-    // }
+    
     if (formulario.reseniaTexto == "") {
         errores.push("Ey! No me dejes el texto vacio!");
     }
@@ -73,6 +76,9 @@ let peliculasController = {
                     res.redirect('/peliculas')
                 })
         })    
+    } else if (errores[0] == "No existe el mail" ) {
+        res.redirect("/peliculas/registrarse")
+        
     } else {
         res.send(errores)
     }

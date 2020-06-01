@@ -7,12 +7,23 @@ let usuariosController = {
 
     register: function(req, res){
         res.render('registrarse',{
+            errores : false
 
         })
 
     },
-    save: function(req, res){
-        
+    save: async function(req, res){
+    let errores = [];
+    if (req.body.nombre == "") {
+        errores.push("Pone un nombre")
+
+    } 
+    if (req.body.email == ""){
+        errores.push("Pone un mail")
+
+    } 
+    if (errores.length == 0) {
+
         let usuario  = {
                 nombre: req.body.nombre,
                 email: req.body.email,
@@ -21,11 +32,16 @@ let usuariosController = {
             }
     
         // Guardarla en base de datos....
-        db.Usuario.create(usuario)
-        .then(() => {
-            res.redirect('/peliculas')
+        await db.Usuario.create(usuario)
+        
+        res.redirect('/peliculas')
+        
+        }  
+    else{
+        res.render("registrarse",{
+            errores: errores 
         })
-            
+    }      
     },
     search: function(req, res){
                   
