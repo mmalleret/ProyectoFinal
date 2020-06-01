@@ -45,6 +45,9 @@ let peliculasController = {
         db.Resenia.findAll({
             where:[
                 { id_pelicula:req.params.idpelicula }
+            ], 
+            include: [
+                {association: 'Usuario'}
             ]
         })
         .then(function(pelis){

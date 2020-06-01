@@ -44,7 +44,7 @@ window.addEventListener("load", function(){
               reseniasHTML += resenias[i].texto_de_resenia
               reseniasHTML += resenias[i].puntaje
               reseniasHTML += resenias[i].updatedAt
-              reseniasHTML += resenias[i].id_usuarios
+              reseniasHTML += '<a href="/peliculas/detalleUsuario/' + resenias[i].id_usuarios + '">' + resenias[i].Usuario.nombre + '</a>'
               reseniasHTML += "</div>"
               document.querySelector(".reseniasPelis").innerHTML += reseniasHTML
               }

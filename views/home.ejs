@@ -16,10 +16,10 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
        <img src="/images/logoNuevo.png" alt="" height="100px">
-       <form class="form-inline my-2 my-lg-0 form-buscar" action="/peliculas/resultado" method="get">
-         <i class="fas fa-search"></i>
-         <input id="buscador"class="form-control mr-sm-2" type="text" name="buscador" placeholder="Buscar" aria-label="Search">
-         <button id="botonBuscar" class="btn btn-outline-dark" type="submit">Buscar</button>
+       <form class="uk-search uk-search-default" action="/peliculas/resultado" method="get">
+        <span uk-search-icon></span>
+         <input id="buscador"class="uk-search-input" type="text" name="buscador" placeholder="Buscar" aria-label="Search">
+         <button id="botonBuscar" class="uk-button uk-button-default" type="submit">Buscar</button>
        </form>
        <div class="login">
         <a href="/peliculas/registrarse">
