@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 footer {
-  background-color: #d1f1ff;
+  background-color: #578DFF;
+  background-color: black;
 }
 ul.footer{
   height: 8%;
@@ -28,6 +29,7 @@ li.footer{
 ul.redes{
   float: left;
   font-size: 5%;
+  color: #578DFF;
 }
 
  ul.descargas{
@@ -39,28 +41,32 @@ ul.iconos-redes{
   position: relative;
   left: -31px;
   top:-18px;
+  color: #578DFF;
 }
 .iconos-redes i:hover{
-  color: #FF0040
+  color: #578DFF;
 }
 ul.iconos-descargas{
   font-size: 24px;
   position: relative;
   left: 12px;
   top:-18px;
+  color: #578DFF;
 }
 .iconos-descargas i:hover{
-  color:#FF0040
+  color: #578DFF
   }
 
 h6.titulos-redes{
   font-family: sans-serif;
   font-size: .875rem;
+  color: #578DFF;
 
 }
 h6.titulos-descargas{
   font-family: sans-serif;
   font-size: .875rem;
+  color: #578DFF;
 }
 
 section.nombres-footer{
@@ -68,6 +74,7 @@ section.nombres-footer{
   border-top: 3px solid rgba(249,249,249,0.5);
   overflow: hidden;
   position: relative;
+  
 }
 h3.nombres-footer{
   font-family: sans-serif;
@@ -77,6 +84,7 @@ h3.nombres-footer{
   margin-right: 0;
   margin-top: 5px;
   margin-bottom: 15px;
+  color: white;
 }
 img.logo-tmdb{
   float: left;
