@@ -1,32 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('./partials/header')  %> 
+<link rel="stylesheet" href="/stylesheets/form.css">
 <body>
-    <form action="/peliculas/agregarResenia/<%=id%> " method="POST">
-        
-        <div>
-            <label for="">Email</label>
-            <input type="email" name="email">
+    <div id="divQueEncierra">
+    <h1 id="titulo"><span>Agregar Reseña</span></h1>
+    <br>
+    <form action="/peliculas/agregarResenia/<%=id%> " method="POST">   
+        <div class="uk-margin">
+            <label id="label" for="" >Email</label>
+            <br>
+            <div class="uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                <input class="uk-input" type="email" name="email">
+            </div>
+            <br>
+            <div class="uk-margin">
+                <label id="label" for="">Contraseña</label>
+                <br>
+                <div class="uk-inline">
+                    <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                    <input class="uk-input" type="password" name="password">
+                </div>
+            </div>
+            
+        <div class="uk-margin">
+            <label id="label" for="">Reseña</label>
+            <br>
+            <div class="uk-inline">
+                <a class="uk-form-icon"  uk-icon="icon: pencil"></a>
+                <input class="uk-input" type="text" name="reseniaTexto">
+            </div>
         </div>
         <div>
-            <label for="">Contraseña</label>
-            <input type="password" name="password">
-        </div>
-        <div>
-            <label for="">Reseña</label>
-            <input type="text" name="reseniaTexto">
-        </div>
-        <div>
-            <label for="">Puntaje</label>
+            <label id="label" for="">Puntaje</label>
+            <br>
             <input type="number" name="puntaje" min="0" max="10">
         </div>
-
-        
-        <input type="submit" value="Enviar">
+        <br>
+        <br>
+        <input type="submit" class="button button2" value="Enviar">
     </form> 
+    </div>
 </body>
 </html>
