@@ -27,7 +27,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    margin: 15px 70px;
+    margin: 0px 0px;
     transition-duration: 0.4s;
     cursor: pointer;
   }
@@ -54,5 +54,5 @@
         text-align: center;
         line-height: 75px;
         margin-top: -3em;
-        padding-right: 8px;
+        padding-right: 16px;
       }
