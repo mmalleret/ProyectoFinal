@@ -7,6 +7,9 @@
   }
   #titulo{
     color: #578DFF;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
   }
   #label{
     color: white;
@@ -19,12 +22,12 @@
     border: none;
     border-radius: 4px;
     color: white;
-    padding: 16px 32px;
+    padding: 10px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    margin: 4px 2px;
+    margin: 15px 70px;
     transition-duration: 0.4s;
     cursor: pointer;
   }
@@ -32,7 +35,24 @@
     background-color: #008CBA;
     color: white;
   }
-  #divQueEncierra{
-     color: hotpink;
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    background-color:black;
   }
-  
+  .uk-form-width-large {
+    width: 450px;
+    border-color: blue;
+    }
+.numeros {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    }  
+.numeros > div {
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        margin-top: -3em;
+        padding-right: 8px;
+      }
