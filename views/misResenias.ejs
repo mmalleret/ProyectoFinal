@@ -1,52 +1,68 @@
 <%- include('./partials/header')  %> 
     <link rel="stylesheet" href="/stylesheets/modal.css">
+    <link rel="stylesheet" href="/stylesheets/form.css">
     <script type="text/javascript" src="/javascripts/misResenias.js"> </script>
     <script type="text/javascript" src="/javascripts/funciones.js"> </script>
     <title>Document</title>
 </head>
 <body>
+  <h1 id="titulo"><span>Mis Resenias</span></h1>
+    <div class="flex-container">
     <form action="/peliculas/misResenias" method="POST">
-        <div>
-            <label for="">Email</label>
-            <input type="email" name="email">
-        </div>
-        <div>
-            <label for="">Contraseña</label>
-            <input type="password" name="password">
-        </div>
-        <input type="submit" value="Enviar">
+      <div class="uk-margin">
+        <label id="label" for="">Email</label>
+        <br>
+        <div class="uk-inline">
+        <span class="uk-form-icon" uk-icon="icon: user"></span>
+        <input class="uk-input uk-form-width-large" type="email" name="email">
+    </div>
+    </div>  
+      <div class="uk-margin">
+        <label id="label" for="">Contraseña</label>
+        <br>
+        <div class="uk-inline">
+        <span class="uk-form-icon" uk-icon="icon: lock"></span>
+        <input class="uk-input uk-form-width-large" type="password" name="password">
+      </div>
+      </div>
+        <input class="button button2" type="submit" value="Enviar">
     </form>
+  </div>
     <% if (hayresenia == true) { %> 
    
       <% if (respuesta.length > 0) { %> 
     
-      <h1>Mis Resenias</h1>
+      <h2 class="todasMisResenias">Todas mis resenias</h2>
     
       <% for (let i = 0; i < respuesta.length; i++) { %>
           <li>
               <%=respuesta[i].texto_de_resenia%>,<%=respuesta[i].createdAt%>, <%=respuesta[i].puntaje%>, <%=respuesta[i].id_pelicula%>, 
           </li>
+          <br>
+          <br>
+          <div class="flexboxButtons">
           <div>
               <a href="/peliculas/editar/<%=respuesta[i].idresenias%>">
-                  <button  type="button">
-                    editar 
+                  <button class="button button2" type="button">
+                    Editar 
                   </button>
               </a>
           </div>
           <br>
           <div>
               <a href="/peliculas/borrar/<%=respuesta[i].idresenias%>">
-                  <button  type="button">
-                    borrar 
+                  <button class="button button2" type="button">
+                    Borrar 
                   </button>
               </a>
           </div>
           <br>
           <div>
-              <button  type="button" class="detalle" idpelicula="<%= respuesta[i].id_pelicula %>">
-                    detalle  
+              <button id="botonDetalle" type="button" class="detalle" idpelicula="<%= respuesta[i].id_pelicula %>">
+                    Detalle  
               </button>
           </div>
+        </div>
 
       <% } %> 
 
@@ -104,4 +120,3 @@
     </div>
    </div>
 
-<%- include('./partials/footer')  %>

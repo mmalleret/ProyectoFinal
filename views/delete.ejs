@@ -1,18 +1,31 @@
 <%- include('./partials/header')  %> 
+<link rel="stylesheet" href="/stylesheets/form.css">
 </head>
 <body>
+    <h1 id="titulo"><span>Borrar Reseña</span></h1>
+    <div class="flex-container">
     <form action="/peliculas/borrar/<%=idBorrar%> " method="POST">
-        <div>
-            <label for="">Email</label>
-            <input type="email" name="email">
-        </div>
-        <div>
-            <label for="">Contraseña</label>
-            <input type="password" name="password">
-        </div>
-        <input type="submit" value="Enviar">
+        <div class="uk-margin">
+            <label id="label" for="" >Email</label>
+            <br>
+            <div class="uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                <input class="uk-input uk-form-width-large" type="email" name="email">
+            </div>
+            <br>
+            <div class="uk-margin">
+                <label id="label" for="">Contraseña</label>
+                <br>
+                <div class="uk-inline">
+                    <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                    <input class="uk-input uk-form-width-large" type="password" name="password">
+                </div>
+            </div>
         
-        <button type="submit">borrar</button>
+        <input type="submit" class="button button2" value="Enviar">
+        
+        <button class="button button2" type="submit">borrar</button>
     </form>
+</div>
 
 <%- include('./partials/footer')  %>

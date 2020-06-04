@@ -1,10 +1,36 @@
 <%- include('./partials/header')  %> 
+<link rel="stylesheet" href="/stylesheets/form.css">
 </head>
 <body>
-    <h1><%=usuario.nombre%></h1>
+    <br>
+    <h1 id="titulo"><%=usuario.nombre%></h1>
+    <br>
+    <br>
+    <br>
+    <div class="flex-container">
+    <div class="uk-margin">  
+        <div class="uk-inline">
+            <span class="uk-icon" uk-icon="icon: mail; ratio: 1.5"></span>
+            <label id="datos" for="">Email:</label>    
+    </div>
     <ul>
-        <li><%=usuario.email%></li>
-        <li><%=usuario.fecha_de_nacimiento%></li>
+        <li class="li">
+            <%=usuario.email%>
+        </li>
     </ul>
+        <br>
+        <div class="uk-inline">
+            <span class="uk-icon" uk-icon="icon: calendar; ratio: 1.5"></span>
+            <label id="datos" for="">Fecha de Nacimiento</label>
+    </div>
+        <ul>
+            <li class="li">
+                <%=usuario.fecha_de_nacimiento%>
+            </li>
+        </ul>
+    </div>
+</div>
+    
+  
     
 <%- include('./partials/footer')  %>

@@ -1,27 +1,56 @@
 <%- include('./partials/header')  %> 
+<link rel="stylesheet" href="/stylesheets/form.css">
 </head>
 <body>
+    <h1 id="titulo"><span>Editar Reseña</span></h1>
+    <div class="flex-container">
     <form action="/peliculas/editar/<%=resenia.idresenias%>" method="POST">
-        
-        <div>
-            <label for="">Email</label>
-            <input type="email" name="email">
+    <div class="uk-margin">
+        <label id="label" for="" >Email</label>
+        <br>
+        <div class="uk-inline">
+            <span class="uk-form-icon" uk-icon="icon: user"></span>
+            <input class="uk-input uk-form-width-large" type="email" name="email">
         </div>
-        <div>
-            <label for="">Contraseña</label>
-            <input type="password" name="password">
+        <br>
+        <div class="uk-margin">
+            <label id="label" for="">Contraseña</label>
+            <br>
+            <div class="uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                <input class="uk-input uk-form-width-large" type="password" name="password">
+            </div>
         </div>
-        <div>
-            <label for="">Reseña</label>
-            <input type="text" name="reseniaTexto" value="<%=resenia.texto_de_resenia%> ">
+        <div class="uk-margin">
+            <label id="label" for="">Reseña</label>
+            <br>
+            <div class="uk-inline">
+                <a class="uk-form-icon"  uk-icon="icon: pencil"></a>
+                <input class="uk-input uk-form-width-large" type="text" name="reseniaTexto" value="<%=resenia.texto_de_resenia%> ">
+            </div>
         </div>
-        <div>
-            <label for="">Puntaje</label>
-            <input type="number" name="puntaje" min="0" max="10" value="<%=resenia.puntaje%>">
+        <div class="uk-margin">
+            <label id="label" for="">Puntaje</label>
+            <br>
+            <input type="range" class="uk-range" name="puntaje" min="1" max="10" value="<%=resenia.puntaje%>">
+        </div>
+        <div class="numeros">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>  
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>  
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+
         </div>
 
         
-        <input type="submit" value="Editar">
+        <input type="submit" class="button button2" value="Editar">
     </form> 
+</div>
     
 <%- include('./partials/footer')  %>

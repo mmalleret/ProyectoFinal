@@ -4,6 +4,7 @@
   
   body{
     background-color: black;
+    padding-bottom: 205px;
   }
   #titulo{
     color: #578DFF;
@@ -56,3 +57,52 @@
         margin-top: -3em;
         padding-right: 16px;
       }
+.todasMisResenias{
+    color: white;
+    font-weight: 400;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    }
+.flexboxButtons{
+    display: flex;
+  flex-wrap: nowrap;
+}
+.flexboxButtons > div {
+    width: 90px;
+    margin: 10px;
+    padding-top: -3em;
+  }
+#botonDetalle{
+    background-color:#578DFF; 
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0px 0px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#botonDetalle:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+.misResenias{
+    color: white;
+    font-weight: 400;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+#datos{
+    font-family: "Times New Roman", Times, serif;
+    color:#578DFF;
+    font-size: 17px;
+}
+.li{
+    font-size: 18px;
+    color: white;
+}

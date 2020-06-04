@@ -1,14 +1,26 @@
 <%- include('./partials/header')  %> 
+<link rel="stylesheet" href="/stylesheets/form.css">
 </head>
 <body>
-    <form action="" method="GET">
-    <label for="site-search">Buscar usuario:</label>
-    <input type="search" id="site-search" name="buscarUsuario" aria-label="Search through site content">
-    <button>Search</button>
-    </form> 
+    <h1 id="titulo"><span>Buscador de Usuarios</span></h1>
+    <div class="flex-container">
+
+    <div class="uk-margin">
+         <form class="uk-search uk-search-default" action="" method="GET">
+             <br>
+             <div class="uk-inline">
+             <span class="uk-search-icon-flip" uk-search-icon></span>
+            <input class="uk-input uk-form-width-large" type="search" id="site-search" name="buscarUsuario" aria-label="Search through site content">
+        </div>
+    <br>
+    <br>
+            <button class="button button2">Search</button>
+        </form>
+    </div>
+</div> 
     
     <% if(seHizoUnaBusqueda == true) { %>
-        <h1>Usuarios Encontrados: </h1> 
+        <h2 class="misResenias">Usuarios Encontrados: </h2> 
             <% if(elUsuarioBuscado.length > 0) { %>
                 
                 <% for (let i = 0; i < elUsuarioBuscado.length; i++) { %>
