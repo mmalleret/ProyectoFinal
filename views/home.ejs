@@ -16,12 +16,14 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
        <img src="/images/logoNuevo.png" alt="" height="100px">
+       <div class="laBusqueda">
        <form class="uk-search uk-search-default" action="/peliculas/resultado" method="get">
         <span uk-search-icon></span>
          <input id="buscador"class="uk-search-input" type="text" name="buscador" placeholder="Buscar" aria-label="Search">
          <button id="botonBuscar" class="uk-button uk-button-default" type="submit">Buscar</button>
        </form>
-       <div class="login">
+      </div>
+       <!-- <div class="login">
         <a href="/peliculas/registrarse">
            <button id="botonLog" type="button" class="uk-button uk-button-default">
              Registrarse
@@ -41,7 +43,7 @@
              Mis Reseñas
            </button>
         </a>
-       </div>
+       </div> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
          <span id="toggler"class="navbar-toggler-icon"></span>
         </button>
@@ -60,6 +62,16 @@
 
         </div>
 
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Usuarios 
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/peliculas/registrarse">Registrarse</a>
+          <a class="dropdown-item" href="/peliculas/resultadoUsuario">Buscador</a>
+          <a class="dropdown-item" href="/peliculas/misResenias">Mis Reseñas</a>
+        </div>
       </li>
 
       <li class="nav-item active favoritos">
