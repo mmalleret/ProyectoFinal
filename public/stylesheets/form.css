@@ -10,7 +10,13 @@
     color: #578DFF;
     display: flex;
     justify-content: center;
-    padding-top: 25px;
+    padding-top: 60px;
+  }
+  #titulo3{
+    color: #578DFF;
+    display: flex;
+    justify-content: center;
+    padding-top: 15%;
   }
   #label{
     color: white;
@@ -31,6 +37,21 @@
     margin: 0px 0px;
     transition-duration: 0.4s;
     cursor: pointer;
+  }
+  .button3{
+    background-color:#578DFF; 
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0px 0px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left: 15px;
   }
   .button2:hover {
     background-color: #008CBA;

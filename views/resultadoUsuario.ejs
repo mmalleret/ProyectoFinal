@@ -5,7 +5,7 @@
 
 </head>
 <body>
-    <h1 id="titulo"><span>Buscador de Usuarios</span></h1>
+    <h1 id="titulo3"><span>Buscador de Usuarios</span></h1>
     
 <div class="flex-container">
     <div class="uk-margin">
@@ -14,18 +14,18 @@
                 <span class="uk-search-icon-flip" uk-search-icon></span>
                 <input class="uk-input uk-form-width-large" type="search" id="site-search" name="buscarUsuario" aria-label="Search through site content">
             </div>
+        </div>
             <div class="boton">
-                <button class="button button2">Search</button>
+                <button class="button3 button2">Search</button>
             </div>
         </form>
     </div>
-</div> 
+ 
     
     <% if(seHizoUnaBusqueda == true) { %>
         <h2 class="misResenias">Usuarios Encontrados: </h2> 
-        <div class="flex-container" id="centro">
+        <div class="flex-container" >
             <% if(elUsuarioBuscado.length > 0) { %>
-                <div class="content">
                     <ul class="ordenLista">
                         <% for (let i = 0; i < elUsuarioBuscado.length; i++) { %>
                             <li class="listaUsuarios">
@@ -33,7 +33,6 @@
                             </li>
                         <% } %>
                     </ul>
-                </div>
             <% } else { %> 
                 
                 <h2>No se encontraron usuarios</h2>        
