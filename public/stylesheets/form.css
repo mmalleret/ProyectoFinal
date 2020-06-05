@@ -36,10 +36,23 @@
     background-color: #008CBA;
     color: white;
   }
+  .flexUsers{
+    display: flex;
+    align-items: center;
+    display: inline-flexbox;
+    justify-content: center;
+  }
   .flex-container {
     display: flex;
     justify-content: center;
     background-color:black;
+  }
+  #titulo2{
+    color: #578DFF;
+    display: flex;
+    justify-content: center;
+    padding-top: 20%; 
+    margin-bottom: 33px;  
   }
   .uk-form-width-large {
     width: 450px;
@@ -67,6 +80,7 @@
 .flexboxButtons{
     display: flex;
   flex-wrap: nowrap;
+
 }
 .flexboxButtons > div {
     width: 90px;
