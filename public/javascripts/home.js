@@ -40,8 +40,8 @@ window.addEventListener("load", function(){
           console.log(resenias)
           document.querySelector(".reseniasPelis").innerHTML = ""
           for (var i = 0; i < resenias.length; i++) {
-              let reseniasHTML = "<div>"
-              reseniasHTML += resenias[i].texto_de_resenia
+              let reseniasHTML = '<div class="reseniasModal">'
+              reseniasHTML += '<p>' + resenias[i].texto_de_resenia + '</p>'
               reseniasHTML += resenias[i].puntaje
               reseniasHTML += resenias[i].updatedAt
               reseniasHTML += '<a href="/peliculas/detalleUsuario/' + resenias[i].id_usuarios + '">' + resenias[i].Usuario.nombre + '</a>'

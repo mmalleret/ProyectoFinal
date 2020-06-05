@@ -40,4 +40,7 @@ router.post('/editar/:id', peliculasController.editReview);
 //borrar pelicula
 router.get('/borrar/:idBorrar', peliculasController.delete);
 router.post('/borrar/:idBorrar', peliculasController.deleteReview);
+
+//vista errores
+router.get('/error404', peliculasController.errors)
 module.exports = router;

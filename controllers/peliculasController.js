@@ -111,7 +111,7 @@ let peliculasController = {
                         })
         } else {
             
-            res.send("usuario no valido")
+            res.redirect("/peliculas/error404")
         }
     }, 
     edit : function(req, res){
@@ -138,7 +138,7 @@ let peliculasController = {
         .then(() => res.redirect("/peliculas/misResenias"))
     } else {
             
-        res.send("usuario no valido")
+        res.redirect("/peliculas/error404")
     }
 
     }, 
@@ -161,10 +161,14 @@ let peliculasController = {
             res.redirect("/peliculas/misResenias")
         } else {
                 
-            res.send("usuario no valido")
+            res.redirect("/peliculas/error404")
         }
 
     }, 
+    errors: function(req, res){
+        res.render('errores',{
+        })
+    }
 
     
     
