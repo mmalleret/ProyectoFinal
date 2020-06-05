@@ -1,39 +1,46 @@
-<%- include('./partials/header')  %> 
+<%- include('./partials/head')  %> 
 <link rel="stylesheet" href="/stylesheets/form.css">
+<link rel="stylesheet" href="/stylesheets/footerDos.css">
+<link rel="stylesheet" href="/stylesheets/resultadoUsuario.css">
+
 </head>
 <body>
     <h1 id="titulo"><span>Buscador de Usuarios</span></h1>
-    <div class="flex-container">
+<div class="flex-container">
 
     <div class="uk-margin">
          <form class="uk-search uk-search-default" action="" method="GET">
-             <br>
-             <div class="uk-inline">
-             <span class="uk-search-icon-flip" uk-search-icon></span>
-            <input class="uk-input uk-form-width-large" type="search" id="site-search" name="buscarUsuario" aria-label="Search through site content">
-        </div>
-    <br>
-    <br>
-            <button class="button button2">Search</button>
+        
+            <div class="uk-inline">
+                <span class="uk-search-icon-flip" uk-search-icon></span>
+                <input class="uk-input uk-form-width-large" type="search" id="site-search" name="buscarUsuario" aria-label="Search through site content">
+            </div>
+            <div class="boton">
+                <button class="button button2">Search</button>
+            </div>
         </form>
     </div>
 </div> 
     
     <% if(seHizoUnaBusqueda == true) { %>
         <h2 class="misResenias">Usuarios Encontrados: </h2> 
+        <div class="flex-container" id="centro">
             <% if(elUsuarioBuscado.length > 0) { %>
-                
-                <% for (let i = 0; i < elUsuarioBuscado.length; i++) { %>
-                    <li>
-                    <a href="/peliculas/detalleUsuario/<%=elUsuarioBuscado[i].idusuarios%>"><%=elUsuarioBuscado[i].nombre%></a>
-                    </li>
-                <% } %>
-            
+                <div class="content">
+                    <ul class="ordenLista">
+                        <% for (let i = 0; i < elUsuarioBuscado.length; i++) { %>
+                            <li class="listaUsuarios">
+                                <a href="/peliculas/detalleUsuario/<%=elUsuarioBuscado[i].idusuarios%>"><%=elUsuarioBuscado[i].nombre%></a>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
             <% } else { %> 
                 
                 <h2>No se encontraron usuarios</h2>        
             
-                <% } %>   
+            <% } %>  
+        </div> 
         
         
     
@@ -42,4 +49,4 @@
     <% } %> 
     
 
-<%- include('./partials/footer')  %>
+    <%- include('./partials/footerDos')  %>   

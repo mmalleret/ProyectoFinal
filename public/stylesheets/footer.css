@@ -29,6 +29,7 @@ li.footer{
   overflow: hidden;
   position: relative;
   top:25px;
+  left: 64%;
 }
 ul.redes{
   float: left;
@@ -72,17 +73,26 @@ h6.titulos-descargas{
   font-size: .875rem;
   color: #578DFF;
 }
-h3.nombres-footer{
+li.nombres-footer{
   font-family: sans-serif;
-  float: left;
-  font-size: 15px;
-  margin-left: 5px;
-  margin-right: 0;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  font-size: 13px;
+  margin-left: 15px;
   color: white;
 
 }
+.nombres-delfooter{
+  height: 0px;
+
+}
+
+.lista-nombres{
+  list-style-type: none;
+  overflow: hidden;
+  position: relative;
+  top: -51px;
+  width: 175;
+}
+
 img.logo-tmdb{
   float: left;
   width: 8%;
@@ -90,7 +100,6 @@ img.logo-tmdb{
   border-radius: 3px;
   border: 3px white;
   margin-top: 30px;
-  position: relative;
   left:-275px;
 }
 

@@ -1,4 +1,4 @@
-<%- include('./partials/header')  %> 
+<%- include('./partials/head')  %> 
     <!-- //css// -->
     <link rel="stylesheet" href="/stylesheets/home.css">
     <link rel="stylesheet" href="/stylesheets/modal.css">
@@ -6,87 +6,7 @@
     <link rel="stylesheet" href="/stylesheets/footer.css">
 
   </head>
-  <body>
-    <!-- alerta para el buscador -->
-    <div class="alert alert-light" role="alert">
-      Ey Capo! Mínimo 3 caractéres!!!!
-    </div>
-
-     <!--nav bar -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-       <img src="/images/logoNuevo.png" alt="" height="100px">
-       <div class="laBusqueda">
-       <form class="uk-search uk-search-default" action="/peliculas/resultado" method="get">
-        <span uk-search-icon></span>
-         <input id="buscador"class="uk-search-input" type="text" name="buscador" placeholder="Buscar" aria-label="Search">
-         <button id="botonBuscar" class="uk-button uk-button-default" type="submit">Buscar</button>
-       </form>
-      </div>
-       <!-- <div class="login">
-        <a href="/peliculas/registrarse">
-           <button id="botonLog" type="button" class="uk-button uk-button-default">
-             Registrarse
-           </button>
-        </a>
-      </div>
-       <div class="login">
-        <a href="/peliculas/resultadoUsuario">
-           <button id="botonBu" type="button" class="uk-button uk-button-default">
-             Buscador Usuarios
-           </button>
-        </a>
-       </div>
-       <div class="login">
-        <a href="/peliculas/misResenias">
-           <button id="botonAg" type="button" class="uk-button uk-button-default">
-             Mis Reseñas
-           </button>
-        </a>
-       </div> -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span id="toggler"class="navbar-toggler-icon"></span>
-        </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <!--el href tiene que ir ahora hacia la ruta peliculas-->
-        <a class="nav-link" href="/peliculas">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Géneros
-        </a>
-        <div class="dropdown-menu listado-generos" aria-labelledby="navbarDropdown">
-
-        </div>
-
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Usuarios 
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/peliculas/registrarse">Registrarse</a>
-          <a class="dropdown-item" href="/peliculas/resultadoUsuario">Buscador</a>
-          <a class="dropdown-item" href="/peliculas/misResenias">Mis Reseñas</a>
-        </div>
-      </li>
-
-      <li class="nav-item active favoritos">
-        <a class="nav-link" href="/peliculas/favoritos">Favoritos<i class="fas fa-star"></i><span class="sr-only">(current)</span></a>
-      </li>
-    
-    </ul>
-
-    <!-- Button trigger modal -->
-
-    </div>
-  </div>
-</nav>
-<!--header-->
-    </header>
+  <%- include('./partials/header')  %> 
 
     <main>
  <section class="peliculas-populares">

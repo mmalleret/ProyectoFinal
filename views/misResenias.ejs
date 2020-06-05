@@ -1,6 +1,7 @@
-<%- include('./partials/header')  %> 
+<%- include('./partials/head')  %> 
     <link rel="stylesheet" href="/stylesheets/modal.css">
     <link rel="stylesheet" href="/stylesheets/form.css">
+    <link rel="stylesheet" href="/stylesheets/footerDos.css">
     <script type="text/javascript" src="/javascripts/misResenias.js"> </script>
     <script type="text/javascript" src="/javascripts/funciones.js"> </script>
     <title>Document</title>
@@ -77,7 +78,7 @@
     <% } %> 
      
     
-<!-- <este es el modal que usamos para poner las decripciones y nombres de las peliculas, hay un solo modal que cambia su contenido por carrousel>-->
+ <!-- <este es el modal que usamos para poner las decripciones y nombres de las peliculas, hay un solo modal que cambia su contenido por carrousel>-->
   <div id="modal-example" uk-modal>
     <div class="uk-modal-dialog uk-modal-body" id="modalCss">
         <h2 class="uk-modal-title el-titular">Headline</h2>
@@ -119,4 +120,6 @@
 
     </div>
    </div>
+   <%- include('./partials/footerDos')  %>
+
 

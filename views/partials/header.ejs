@@ -1,23 +1,59 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+  <!-- alerta para el buscador -->
+  <div class="alert alert-light" role="alert">
+    Ey Capo! Mínimo 3 caractéres!!!!
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <!--nav bar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+     <a href="/peliculas"><img src="/images/logoNuevo.png" alt="" height="100px"></a>
+     <div class="laBusqueda">
+     <form class="uk-search uk-search-default" action="/peliculas/resultado" method="get">
+      <span uk-search-icon></span>
+       <input id="buscador"class="uk-search-input" type="text" name="buscador" placeholder="Buscar" aria-label="Search">
+       <button id="botonBuscar" class="uk-button uk-button-default" type="submit">Buscar</button>
+     </form>
+    </div>
+     
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span id="toggler"class="navbar-toggler-icon"></span>
+      </button>
 
-    <!--fontawesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-     <!-- google fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <!-- //<bootstrap css>// -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--//<uikit css>//-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
-    <!--//<uikit javascript>//-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
-    <!--CSS footer-->
-    <link rel="stylesheet" href="/stylesheets/footer.css">
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="/peliculas">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Géneros
+      </a>
+      <div class="dropdown-menu listado-generos" aria-labelledby="navbarDropdown">
+
+      </div>
+
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Usuarios 
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="/peliculas/registrarse">Registrarse</a>
+        <a class="dropdown-item" href="/peliculas/resultadoUsuario">Buscador</a>
+        <a class="dropdown-item" href="/peliculas/misResenias">Mis Reseñas</a>
+      </div>
+    </li>
+
+    <li class="nav-item active favoritos">
+      <a class="nav-link" href="/peliculas/favoritos">Favoritos<i class="fas fa-star"></i><span class="sr-only">(current)</span></a>
+    </li>
+  
+  </ul>
+
+  </div>
+</div>
+</nav>
+
+  </header>
+  
