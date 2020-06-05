@@ -36,34 +36,37 @@
       <h2 class="todasMisResenias">Todas mis resenias</h2>
     
       <% for (let i = 0; i < respuesta.length; i++) { %>
-          <li>
-              <%=respuesta[i].texto_de_resenia%>,<%=respuesta[i].createdAt%>, <%=respuesta[i].puntaje%>, <%=respuesta[i].id_pelicula%>, 
-          </li>
-          <br>
-          <br>
-          <div class="flexboxButtons">
           <div>
-              <a href="/peliculas/editar/<%=respuesta[i].idresenias%>">
-                  <button class="button button2" type="button">
-                    Editar 
+              <p><%=respuesta[i].texto_de_resenia%></p>
+                <%=respuesta[i].createdAt%>, 
+              <p><%=respuesta[i].puntaje%><span class="fa fa-star checked"></span></p>
+              <br>
+              <br>
+              <div class="flexboxButtons">
+              <div>
+                  <a href="/peliculas/editar/<%=respuesta[i].idresenias%>">
+                      <button class="button button2" type="button">
+                        Editar 
+                      </button>
+                  </a>
+              </div>
+              <br>
+              <div>
+                  <a href="/peliculas/borrar/<%=respuesta[i].idresenias%>">
+                      <button class="button button2" type="button">
+                        Borrar 
+                      </button>
+                  </a>
+              </div>
+              <br>
+              <div>
+                  <button id="botonDetalle" type="button" class="detalle" idpelicula="<%= respuesta[i].id_pelicula %>">
+                        Detalle  
                   </button>
-              </a>
+              </div>
+            </div>
           </div>
-          <br>
-          <div>
-              <a href="/peliculas/borrar/<%=respuesta[i].idresenias%>">
-                  <button class="button button2" type="button">
-                    Borrar 
-                  </button>
-              </a>
-          </div>
-          <br>
-          <div>
-              <button id="botonDetalle" type="button" class="detalle" idpelicula="<%= respuesta[i].id_pelicula %>">
-                    Detalle  
-              </button>
-          </div>
-        </div>
+          
 
       <% } %> 
 

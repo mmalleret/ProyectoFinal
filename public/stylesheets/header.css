@@ -67,7 +67,8 @@ header div.login button{
 .laBusqueda{
   position: relative; 
   overflow: hidden;
-  left: 70%;
+  left: 60%;
+  margin-top: 25px;
 }
 
 
