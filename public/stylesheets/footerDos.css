@@ -7,7 +7,9 @@ body {
     background-color: black;
 }
 
-footer {
+footer.flex-container {
+    display: flex;
+    justify-content: center;
     background-color: #578DFF;
     background-color: black;
     margin: 0px;

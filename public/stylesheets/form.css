@@ -63,7 +63,7 @@
     display: inline-flexbox;
     justify-content: center;
   }
-  .flex-container {
+  div.flex-container {
     display: flex;
     justify-content: center;
     background-color:black;

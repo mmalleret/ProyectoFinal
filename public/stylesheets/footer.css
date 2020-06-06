@@ -11,7 +11,7 @@ footer {
   overflow: hidden;
   position: relative;
 }
-footer.footer-container{
+.footer-container{
   margin-right: auto;
   margin-left: auto;
   font-size: 16px;
