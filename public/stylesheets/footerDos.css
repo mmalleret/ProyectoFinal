@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box;
   }
+html {
+    min-height: 100%;
+    position: relative;
+}
 
 body {
     margin: 0;
@@ -12,7 +16,6 @@ footer.flex-container {
     justify-content: center;
     background-color: #578DFF;
     background-color: black;
-    margin: 0px;
     height:30vh ;
     overflow: hidden;
     position: relative;
@@ -35,6 +38,8 @@ footer.flex-container {
 .footer{
     position: relative;
     float: left;
+    margin-left: 18%;
+    margin-top: 16%;
 }
   
   ul.redes{
