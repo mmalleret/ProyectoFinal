@@ -10,7 +10,6 @@ body {
 footer {
     background-color: #578DFF;
     background-color: black;
-    padding: 20px;
     margin: 0px;
     height:30vh ;
     overflow: hidden;
@@ -20,27 +19,21 @@ footer {
     margin-right: auto;
     margin-left: auto;
     font-size: 16px;
-    overflow: hidden;
 }
 
 /* logo */
   img.logo-footer{
     float: left;
-    width: 6%;
-    height: 6%;
+    width: 17%;
     position: relative;
-    left: 492px;
-    top: 9px;
     border-radius: 5px;
 }
 
 /* redes */
 .footer{
-    width: 40%;
-    position: absolute;
-    right: -12%;
-    margin-top: -1%;
-  }
+    position: relative;
+    float: left;
+}
   
   ul.redes{
     float: left;

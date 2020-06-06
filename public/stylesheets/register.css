@@ -10,90 +10,9 @@
     margin-bottom: 40px;
     background-color: black;
   }
-  footer {
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    padding-bottom: 1rem;
-  }
-  
+    
   label{
     color: white;
   }
-  ul.footer{
-    background-color: black;
-    height: 8%;
-    list-style-type: none;
-    overflow: hidden;
-    margin: 0px;
-  }
   
-  
-  /* logo */
-  img.logo-footer{
-    float: left;
-    width: 6%;
-    height: 6%;
-    position: relative;
-    left: 492px;
-    top: 9px;
-    border-radius: 5px;
-  }
-
-
-
-  /* redes */
-  li.footer{
-    overflow: hidden;
-    position: relative;
-    top:25px;
-    left: 561px;
-  }
-
-  ul.redes{
-    float: left;
-    font-size: 5%;
-    color: #578DFF;
-  }
-  
-  ul.descargas{
-     float: left;
-     font-size: 5%;
-  }
-
-  ul.iconos-redes{
-    font-size: 24px;
-    position: relative;
-    left: -31px;
-    top:-18px;
-    color: #578DFF;
-  }
-  .iconos-redes i:hover{
-    color: #578DFF;
-  }
-
-  ul.iconos-descargas{
-    font-size: 24px;
-    position: relative;
-    left: 12px;
-    top:-18px;
-    color: #578DFF;
-  }
-  .iconos-descargas i:hover{
-    color: #578DFF
-  }
-  
-  h6.titulos-redes{
-    font-family: sans-serif;
-    font-size: .875rem;
-    color: #578DFF;
-  
-  }
-  h6.titulos-descargas{
-    font-family: sans-serif;
-    font-size: .875rem;
-    color: #578DFF;
-  }
   
