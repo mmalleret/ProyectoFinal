@@ -45,6 +45,7 @@ ul.navbar-nav.mr-auto{
 #botonBuscar{
   float: left;
   margin-left: 9px;
+  color: white;
 }
 
 header form input{

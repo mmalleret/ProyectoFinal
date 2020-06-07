@@ -2,17 +2,28 @@
   float:left;
   margin-top: 1%;
   margin-right: 1%;
-  color: #578DFF;
+  background-color: #578DFF;
+  color: white;
 
+}
+#cuadroResenia{
+  border: 2px solid #578DFF;
+    background-color: #578DFF;
+    border-radius: 16px;
+    padding: 20px 71px;
+    margin-right: 26%;
+    margin-left: 26%;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 .uk-modal-title {
   font-size: 2rem;
   line-height: 1.3;
-  color: white;
+  color: #578DFF;
 }
 .uk-button-default {
   background-color: transparent;
-  color: #578DFF;
+  color: white;
   border: 1px solid #e5e5e5;
 }
 
@@ -38,6 +49,7 @@
   margin-right: 1%;
   margin-top: 1%;
   color: white;
+  background-color: #578DFF;
  
 }
 #reco{

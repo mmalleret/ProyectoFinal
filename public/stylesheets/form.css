@@ -103,6 +103,7 @@
 .flexboxButtons{
     display: flex;
   flex-wrap: nowrap;
+  justify-content: center;
 
 }
 .flexboxButtons > div {
