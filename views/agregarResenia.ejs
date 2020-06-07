@@ -3,55 +3,55 @@
 <link rel="stylesheet" href="/stylesheets/footerDos.css">
 <body>
     <h1 id="titulo"><span>Agregar Reseña</span></h1>
-    <div class="flex-container">
-    <form action="/peliculas/agregarResenia/<%=id%> " method="POST">   
-        <div class="uk-margin">
-            <label id="label" for="" >Email</label>
-            <br>
-            <div class="uk-inline">
-                <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                <input class="uk-input uk-form-width-large" type="email" name="email">
-            </div>
-            <br>
-            <div class="uk-margin">
-                <label id="label" for="">Contraseña</label>
-                <br>
-                <div class="uk-inline">
-                    <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                    <input class="uk-input uk-form-width-large" type="password" name="password">
-                </div>
-            </div>
-            
-        <div class="uk-margin">
-            <label id="label" for="">Reseña</label>
-            <br>
-            <div class="uk-inline">
-                <a class="uk-form-icon"  uk-icon="icon: pencil"></a>
-                <input class="uk-input uk-form-width-large" type="text" name="reseniaTexto">
-            </div>
-        </div>
-        <div class="uk-margin">
-            <label id="label" for="">Puntaje</label>
-            <br>
-            <input type="range" class="uk-range" name="puntaje" min="1" max="10">
-        </div>
-        <div class="numeros">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>  
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>  
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
+        <div class="flex-container">
+            <form action="/peliculas/agregarResenia/<%=id%> " method="POST">   
+                <div class="uk-margin">
+                    <label id="label" for="" >Email</label>
+                    <br>
+                    <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                        <input class="uk-input uk-form-width-large" type="email" name="email">
+                    </div>
+                    <br>
+                    <div class="uk-margin">
+                        <label id="label" for="">Contraseña</label>
+                        <br>
+                        <div class="uk-inline">
+                            <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                            <input class="uk-input uk-form-width-large" type="password" name="password">
+                        </div>
+                    </div>
+                    
+                    <div class="uk-margin">
+                        <label id="label" for="">Reseña</label>
+                        <br>
+                        <div class="uk-inline">
+                        <a class="uk-form-icon"  uk-icon="icon: pencil"></a>
+                        <input class="uk-input uk-form-width-large" type="text" name="reseniaTexto">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label id="label" for="">Puntaje</label>
+                        <br>
+                        <input type="range" class="uk-range" name="puntaje" min="1" max="10">
+                    </div>
+                    <div class="numeros">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>  
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>  
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
 
+                    </div>
+                    <br>
+                    <br>
+                <input type="submit" class="button button2" value="Enviar">
+                </div>
+            </form> 
         </div>
-        
-        <br>
-        <br>
-        <input type="submit" class="button button2" value="Enviar">
-    </form> 
-    </div>
 <%- include('./partials/footerDos')  %>
