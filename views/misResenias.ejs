@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="/stylesheets/form.css">
     <link rel="stylesheet" href="/stylesheets/myreviews.css">
     <link rel="stylesheet" href="/stylesheets/footerDos.css">
+    <link rel="stylesheet" href="/stylesheets/noReviews.css">
     <script type="text/javascript" src="/javascripts/misResenias.js"> </script>
     <script type="text/javascript" src="/javascripts/funciones.js"> </script>
     <title>Document</title>
@@ -33,6 +34,7 @@
       </form>
     </div>
     <% } else { %>
+      <% if (respuesta.length > 0) { %>
       <header>
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="flexboxButtons">
@@ -53,9 +55,8 @@
           </div>
         </nav>
       </header>      
-      <% if (respuesta.length > 0) { %> 
-    
-      <h2 id="titulo4">TODAS MIS RESEÑAS</h2>
+       
+      <h2 id="titulo">Todas mis resenias</h2>
     
       <% for (let i = 0; i < respuesta.length; i++) { %>
         
@@ -95,7 +96,41 @@
 
     <% } else { %>
 
-    <h2>No se encontraron resenias</h2>
+      <div class="flex-container">
+      <h1 id="titulo2">NO SE ENCONTRARON RESEÑAS</h1>
+      </div>
+  
+      <div class="flex-container">
+      <div class="flexboxButtons">
+          <div>
+              <a href="/peliculas/misResenias">
+                  <button class="button button2" type="button">
+                      <span uk-icon="icon: chevron-left"></span>Volver 
+                  </button>
+              </a>
+          </div>
+          <div>
+              <a href="/peliculas">
+                  <button class="button button2" type="button">
+                      <span uk-icon="icon: home"></span>Home 
+                  </button>
+              </a>
+          </div>
+          <div>
+              <a href="/peliculas/registrarse">
+                  <button class="button button2" type="button">
+                      <span uk-icon="icon: sign-in"></span>Registrarse 
+                  </button>
+              </a>
+          </div>
+      </div>
+      </div>
+  
+      <footer class="flex-container2">
+          <div class="footer-container">
+            
+          </div>    
+        </footer>
     
     <% } %> 
     <% } %> 
