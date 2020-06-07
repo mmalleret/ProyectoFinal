@@ -9,6 +9,15 @@
     margin: 0;
     background-color: black;
   }
+  footer.flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: #578DFF;
+    background-color: black;
+    height:50vh ;
+    overflow: hidden;
+    position: relative;
+}
   /* resultados */
   ul.ordenLista{
       list-style-type: none;

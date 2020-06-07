@@ -1,36 +1,41 @@
 <%- include('./partials/head')  %> 
     <link rel="stylesheet" href="/stylesheets/modal.css">
     <link rel="stylesheet" href="/stylesheets/form.css">
+    <link rel="stylesheet" href="/stylesheets/myreviews.css">
     <link rel="stylesheet" href="/stylesheets/footerDos.css">
     <script type="text/javascript" src="/javascripts/misResenias.js"> </script>
     <script type="text/javascript" src="/javascripts/funciones.js"> </script>
     <title>Document</title>
 </head>
 <body>
-  <h1 id="titulo"><span>Mis Resenias</span></h1>
-    <div class="flex-container">
-    <form action="/peliculas/misResenias" method="POST">
-      <div class="uk-margin">
-        <label id="label" for="">Email</label>
-        <br>
-        <div class="uk-inline">
-        <span class="uk-form-icon" uk-icon="icon: mail"></span>
-        <input class="uk-input uk-form-width-large" type="email" name="email">
+  
+    <% if (hayresenia != true) { %> 
+      <h1 id="titulo"><span>Mis Resenias</span></h1>
+      <div class="flex-container">
+      <form action="/peliculas/misResenias" method="POST">
+        <div class="uk-margin">
+          <label id="label" for="">Email</label>
+          <br>
+          <div class="uk-inline">
+          <span class="uk-form-icon" uk-icon="icon: user"></span>
+          <input class="uk-input uk-form-width-large" type="email" name="email">
+      </div>
+      </div>  
+        <div class="uk-margin">
+          <label id="label" for="">Contraseña</label>
+          <br>
+          <div class="uk-inline">
+          <span class="uk-form-icon" uk-icon="icon: lock"></span>
+          <input class="uk-input uk-form-width-large" type="password" name="password">
+        </div>
+        </div>
+          <input class="button button2" type="submit" value="Enviar">
+      </form>
     </div>
-    </div>  
-      <div class="uk-margin">
-        <label id="label" for="">Contraseña</label>
-        <br>
-        <div class="uk-inline">
-        <span class="uk-form-icon" uk-icon="icon: lock"></span>
-        <input class="uk-input uk-form-width-large" type="password" name="password">
-      </div>
-      </div>
-        <input class="button button2" type="submit" value="Enviar">
-    </form>
-  </div>
-    <% if (hayresenia == true) { %> 
-   
+    <% } else { %>
+      
+      
+      
       <% if (respuesta.length > 0) { %> 
     
       <h2 class="todasMisResenias">Todas mis resenias</h2>
@@ -76,9 +81,6 @@
     <h2>No se encontraron resenias</h2>
     
     <% } %> 
-    <% } else { %>
-      
-      
     <% } %> 
      
     

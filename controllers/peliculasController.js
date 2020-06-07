@@ -90,7 +90,7 @@ let peliculasController = {
     myReviews: function(req, res){
         res.render('misResenias',{
         respuesta:[],
-        hayresenia: false 
+        hayresenia: false, 
 
         })
     }, 

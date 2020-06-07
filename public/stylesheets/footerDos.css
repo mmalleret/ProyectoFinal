@@ -11,7 +11,7 @@ body {
     background-color: black;
 }
 
-footer.flex-container {
+/* footer.flex-container {
     display: flex;
     justify-content: center;
     background-color: #578DFF;
@@ -19,7 +19,7 @@ footer.flex-container {
     height:30vh ;
     overflow: hidden;
     position: relative;
-}
+} */
 .footer-container{
     margin-right: auto;
     margin-left: auto;
