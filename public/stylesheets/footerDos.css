@@ -11,15 +11,7 @@ body {
     background-color: black;
 }
 
-/* footer.flex-container {
-    display: flex;
-    justify-content: center;
-    background-color: #578DFF;
-    background-color: black;
-    height:30vh ;
-    overflow: hidden;
-    position: relative;
-} */
+
 .footer-container{
     margin-right: auto;
     margin-left: auto;
@@ -32,7 +24,6 @@ body {
     width: 17%;
     position: relative;
     border-radius: 5px;
-    margin-top: 13%;
     margin-left: 8%;
 }
 
@@ -41,7 +32,6 @@ body {
     position: relative;
     float: left;
     margin-left: 3%;
-    margin-top: 16%;
 }
   
   ul.redes{

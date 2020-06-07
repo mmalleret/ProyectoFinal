@@ -18,6 +18,13 @@
     overflow: hidden;
     position: relative;
 }
+img.logo-footer{
+  margin-top: 41%; 
+}
+.footer{
+  margin-top: 43%;
+}
+
   /* resultados */
   ul.ordenLista{
       list-style-type: none;

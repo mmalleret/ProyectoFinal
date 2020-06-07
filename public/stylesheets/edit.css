@@ -3,7 +3,14 @@ footer.flex-container {
     justify-content: center;
     background-color: #578DFF;
     background-color: black;
-    height:35vh ;
+    height:30vh ;
     overflow: hidden;
     position: relative;
+}
+/* logo */
+img.logo-footer{
+    margin-top: 22%; 
+}
+.footer{
+    margin-top: 25%;
 }
