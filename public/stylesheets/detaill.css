@@ -1,0 +1,9 @@
+footer.flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: #578DFF;
+    background-color: black;
+    height:30vh ;
+    overflow: hidden;
+    position: relative;
+}

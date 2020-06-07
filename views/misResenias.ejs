@@ -33,9 +33,26 @@
       </form>
     </div>
     <% } else { %>
-      
-      
-      
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="flexboxButtons">
+            <div>
+                <a href="/peliculas/misResenias">
+                    <button class="button button2" type="button">
+                        <span uk-icon="icon: chevron-left"></span>Volver 
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/peliculas">
+                    <button class="button button2" type="button">
+                        <span uk-icon="icon: home"></span>Home 
+                    </button>
+                </a>
+            </div>
+          </div>
+        </nav>
+      </header>      
       <% if (respuesta.length > 0) { %> 
     
       <h2 class="todasMisResenias">Todas mis resenias</h2>
