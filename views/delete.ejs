@@ -1,5 +1,6 @@
 <%- include('./partials/head')  %> 
 <link rel="stylesheet" href="/stylesheets/form.css">
+<link rel="stylesheet" href="/stylesheets/delete.css">
 <link rel="stylesheet" href="/stylesheets/footerDos.css">
 </head>
 <body>
@@ -8,23 +9,23 @@
     <form action="/peliculas/borrar/<%=idBorrar%> " method="POST">
         <div class="uk-margin">
             <label id="label" for="" >Email</label>
-            <br>
-            <div class="uk-inline">
-                <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                <input class="uk-input uk-form-width-large" type="email" name="email">
-            </div>
-            <br>
-            <div class="uk-margin">
-                <label id="label" for="">Contraseña</label>
                 <br>
                 <div class="uk-inline">
-                    <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                    <input class="uk-input uk-form-width-large" type="password" name="password">
+                    <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                    <input class="uk-input uk-form-width-large" type="email" name="email">
                 </div>
-            </div>
-        
-        <input type="submit" class="button button2" value="Borrar">
-        
+                <br>
+                <div class="uk-margin">
+                    <label id="label" for="">Contraseña</label>
+                    <br>
+                    <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                        <input class="uk-input uk-form-width-large" type="password" name="password">
+                    </div>
+                </div>
+            
+            <input type="submit" class="button button2" value="Borrar">
+        </div>
     </form>
 </div>
 
