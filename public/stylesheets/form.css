@@ -106,6 +106,21 @@
   justify-content: center;
 
 }
+.containerErrores{
+    display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.errorRegister{
+    border: 2px solid #578DFF;
+    background-color: #578DFF;
+    border-radius: 77px;
+    padding: 0px 50px;
+    margin-top: 21px;
+    margin-bottom: 5px;
+    color: white;
+    justify-content: center;
+}
 .flexboxButtons > div {
     width: 90px;
     margin: 10px;

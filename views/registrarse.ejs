@@ -43,7 +43,13 @@
 </div>
 <% if (errores.length > 0) { %>
     <% for (let i = 0; i < errores.length; i++) { %>
-        <p><%=errores[i]%> </p> 
+        <div class="containerErrores">
+        <div class="errorRegister">
+            <li>
+            <%=errores[i]%>
+        </li>
+        </div>
+    </div>
     <% } %> 
     <% } else { %> 
     <% } %> 
