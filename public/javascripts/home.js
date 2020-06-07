@@ -42,7 +42,7 @@ window.addEventListener("load", function(){
           for (var i = 0; i < resenias.length; i++) {
               let reseniasHTML = '<div class="reseniasModal">'
               reseniasHTML += '<p>' + resenias[i].texto_de_resenia + '</p>'
-              reseniasHTML += resenias[i].puntaje
+              reseniasHTML += '<p>' + resenias[i].puntaje + '<span class"fa fa-star checked"></span></p>'
               reseniasHTML += resenias[i].updatedAt
               reseniasHTML += '<a href="/peliculas/detalleUsuario/' + resenias[i].id_usuarios + '">' + resenias[i].Usuario.nombre + '</a>'
               reseniasHTML += "</div>"
