@@ -61,9 +61,9 @@
         
           <div class="reseniasMias">
             <div id="cuadroResenia">
-              <p><%=respuesta[i].texto_de_resenia%></p>
-                <%=respuesta[i].createdAt%> 
-              <p><%=respuesta[i].puntaje%><span class="fa fa-star checked"></span></p>
+              <p><span uk-icon="commenting"></span> <%=respuesta[i].texto_de_resenia%></p>
+              <p><span uk-icon="calendar"></span> <%=respuesta[i].createdAt%></p>
+              <p><span class="fa fa-star checked"></span> <%=respuesta[i].puntaje%></p>
               <div class="flexboxButtons">
               <div>
                   <a href="/peliculas/editar/<%=respuesta[i].idresenias%>">
