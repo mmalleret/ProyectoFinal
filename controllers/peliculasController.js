@@ -83,10 +83,11 @@ let peliculasController = {
         res.redirect("/peliculas/registrarse")
         
     } else {
-        res.redirect('/peliculas/error101')
-        // res.render('agregarResenia',{
-        //     errores: errores,
-        // })
+        // res.redirect('/peliculas/error101')
+        res.render('erroresA',{
+            id: req.params.idPelicula,
+            errores: errores, 
+        })
     }
         
     },

@@ -6,21 +6,21 @@
 <body>
     
     <div class="flex-container">
-    <h1 id="titulo2">NO PODEMOS PROCESAR TU RESEÑA</h1>
+    <h1 id="titulo2">NO PUDIMOS PROCESAR TU RESEÑA</h1>
 
     </div>
     <div class="flex-container" >
-    <p id="error">TE PEDIMOS QUE COMPLETES TODOS LOS CAMPOS ANTES DE ENVIAR TU RESEÑA</p>
+    <p id="error">TE PEDIMOS QUE REVISES TODOS LOS CAMPOS ANTES DE ENVIAR TU RESEÑA</p>
     </div>
     <div class="flex-container">
     <div class="flexboxButtons">
-        <!-- <div>
-            <a href="/peliculas/agregarResenia/">
+        <div>
+            <a href="/peliculas/agregarResenia/<%=id %> ">
                 <button class="button button2" type="button">
                     <span uk-icon="icon: chevron-left"></span>Volver 
                 </button>
             </a>
-        </div> -->
+        </div>
         <div>
             <a href="/peliculas">
                 <button class="button button2" type="button">
@@ -37,6 +37,18 @@
         </div>
     </div>
     </div>
+    <% if (errores.length > 0) { %>
+        <% for (let i = 0; i < errores.length; i++) { %>
+            <div uk-alert>
+                <%=errores[i]%>
+                <a class="uk-alert-close" uk-close></a>
+            </div>
+                
+            
+        <% } %> 
+        <% } else { %> 
+        <% } %> 
+    
 
     <footer class="flex-container">
         <div class="footer-container">
