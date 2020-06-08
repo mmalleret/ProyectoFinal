@@ -43,4 +43,5 @@ router.post('/borrar/:idBorrar', peliculasController.deleteReview);
 
 //vista errores
 router.get('/error404', peliculasController.errors)
+router.get('/error101', peliculasController.errorsA)
 module.exports = router;
