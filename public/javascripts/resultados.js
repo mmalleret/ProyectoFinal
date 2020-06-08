@@ -46,7 +46,7 @@ window.onload = function(){
               for (var i = 0; i < resenias.length; i++) {
                   let reseniasHTML = '<div class="reseniasModal">'
                   reseniasHTML += '<ul class="reseniaDelModal">'
-                  reseniasHTML += '<li><span uk-icon="commenting"></span>  " ' + resenias[i].texto_de_resenia + '"</li>'
+                  reseniasHTML += '<li><span uk-icon="commenting"></span>  "' + resenias[i].texto_de_resenia + '"</li>'
                   reseniasHTML += '<li><span uk-icon="user"></span>  <a href="/peliculas/detalleUsuario/' + resenias[i].id_usuarios + '">' + resenias[i].Usuario.nombre + '</a></li>'
                   reseniasHTML += '<li><span class="fa fa-star checked"></span>  ' + resenias[i].puntaje + '</li>'
                   reseniasHTML += '<li> <span uk-icon="calendar"></span> ' + resenias[i].updatedAt + '</li>'
