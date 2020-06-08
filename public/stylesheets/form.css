@@ -25,6 +25,17 @@
     justify-content: center;
     padding-top: 0px;
   }
+  #cuadroResenia{
+  border: 2px solid #578DFF;
+  background-color: #578DFF;
+  border-radius: 16px;
+  padding: 20px 71px;
+  margin-right: 26%;
+  margin-left: 26%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  }
+  
   #label{
     color: white;
     font-weight: 400;

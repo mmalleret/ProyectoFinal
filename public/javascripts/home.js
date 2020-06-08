@@ -41,11 +41,13 @@ window.addEventListener("load", function(){
           document.querySelector(".reseniasPelis").innerHTML = ""
           for (var i = 0; i < resenias.length; i++) {
               let reseniasHTML = '<div class="reseniasModal">'
-              reseniasHTML += '<p>' + resenias[i].texto_de_resenia + '</p>'
-              reseniasHTML += '<p>' + resenias[i].puntaje + '<span class"fa fa-star checked"></span></p>'
-              reseniasHTML += resenias[i].updatedAt
-              reseniasHTML += '<a href="/peliculas/detalleUsuario/' + resenias[i].id_usuarios + '">' + resenias[i].Usuario.nombre + '</a>'
-              reseniasHTML += "</div>"
+              reseniasHTML += '<ul class="reseniaDelModal">'
+              reseniasHTML += '<li><span uk-icon="commenting"></span>  " ' + resenias[i].texto_de_resenia + '"</li>'
+              reseniasHTML += '<li><span uk-icon="user"></span>  <a href="/peliculas/detalleUsuario/' + resenias[i].id_usuarios + '">' + resenias[i].Usuario.nombre + '</a></li>'
+              reseniasHTML += '<li><span class="fa fa-star checked"></span>  ' + resenias[i].puntaje + '</li>'
+              reseniasHTML += '<li> <span uk-icon="calendar"></span> ' + resenias[i].updatedAt + '</li>'
+              reseniasHTML += '</ul>'
+              reseniasHTML += '</div>'
               document.querySelector(".reseniasPelis").innerHTML += reseniasHTML
               }
         })
@@ -54,7 +56,7 @@ window.addEventListener("load", function(){
          document.querySelector(".el-resumen").innerHTML = resumen
          document.querySelector("#elVerMas").style.display = "none"
          //esta linea de codigo es para agregar el id de la pelicula a la ruta 
-         document.querySelector(".jsBackPlis").innerHTML = '<a href="/peliculas/agregarResenia/' + id + '" > <button class= "uk-button uk-button-default" > Añadir reseñas </button> </a>'
+         document.querySelector(".jsBackPlis").innerHTML = '<a href="/peliculas/agregarResenia/' + id + '" > <button class= "uk-button uk-button-default" id="aniadir" > Añadir reseñas </button> </a>'
          document.querySelector("#vamos").style.display = "block"
          document.querySelector("#vamos").setAttribute("idPelicula", id)
          document.querySelector("#elDivFav").innerHTML ='<button class="miBoton" id="botonFavoritos" name="' + id + '"> &#9733; </button>'

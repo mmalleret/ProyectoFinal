@@ -22,7 +22,7 @@ async function abrirModalDePeli (idDePeli) {
     console.log("----------")
     titulo = pelicula.title
     resumen = pelicula.overview
-  
+
     fetch('/peliculas/resenias/' +id)
            .then(function(res){
              return res.json()
@@ -31,10 +31,15 @@ async function abrirModalDePeli (idDePeli) {
             console.log(resenias)
             document.querySelector(".reseniasPelis").innerHTML = ""
             for (var i = 0; i < resenias.length; i++) {
-                let reseniasHTML = "<div>"
-                reseniasHTML += resenias[i].texto_de_resenia
-                reseniasHTML += "</div>"
-                document.querySelector(".reseniasPelis").innerHTML += reseniasHTML
+                let reseniasHTML = '<div class="reseniasModal">'
+              reseniasHTML += '<ul class="reseniaDelModal">'
+              reseniasHTML += '<li><span uk-icon="commenting"></span>  " ' + resenias[i].texto_de_resenia + '"</li>'
+              reseniasHTML += '<li><span uk-icon="user"></span>  <a href="/peliculas/detalleUsuario/' + resenias[i].id_usuarios + '">' + resenias[i].Usuario.nombre + '</a></li>'
+              reseniasHTML += '<li><span class="fa fa-star checked"></span>  ' + resenias[i].puntaje + '</li>'
+              reseniasHTML += '<li> <span uk-icon="calendar"></span> ' + resenias[i].updatedAt + '</li>'
+              reseniasHTML += '</ul>'
+              reseniasHTML += '</div>'
+              document.querySelector(".reseniasPelis").innerHTML += reseniasHTML
                 }
           })
           
@@ -42,7 +47,7 @@ async function abrirModalDePeli (idDePeli) {
            document.querySelector(".el-resumen").innerHTML = resumen
            document.querySelector("#elVerMas").style.display = "none"
            //esta linea de codigo es para agregar el id de la pelicula a la ruta 
-           document.querySelector(".jsBackPlis").innerHTML = '<a href="/peliculas/agregarResenia/' + id + '" > <button class= "uk-button uk-button-default" > Añadir reseñas </button> </a>'
+           document.querySelector(".jsBackPlis").innerHTML = '<a href="/peliculas/agregarResenia/' + id + '" > <button class= "uk-button uk-button-default" id="aniadir" > Añadir reseñas </button> </a>'
            document.querySelector("#vamos").style.display = "block"
            document.querySelector("#vamos").setAttribute("idPelicula", id)
   }
